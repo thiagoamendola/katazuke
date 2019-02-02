@@ -5986,7 +5986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  FoldedClothPrefab: {fileID: 4336522700159911241, guid: 22d033f631547e94bb63f1b6dee373f1,
+  foldedClothPrefab: {fileID: 4336522700159911241, guid: 22d033f631547e94bb63f1b6dee373f1,
     type: 3}
 --- !u!65 &375978957
 BoxCollider:
@@ -6307,7 +6307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
-  FoldedClothPrefab: {fileID: 1187411428136906423, guid: 6dadbbc4424a6824498a68afcfc3487b,
+  foldedClothPrefab: {fileID: 1187411428136906423, guid: 6dadbbc4424a6824498a68afcfc3487b,
     type: 3}
 --- !u!65 &397854834
 BoxCollider:
@@ -9670,8 +9670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
-  FoldedClothPrefab: {fileID: 1268370143355874, guid: 63a53cd2a451d8a4a9bd7fbabd36efa0,
-    type: 3}
+  foldedClothPrefab: {fileID: 0}
 --- !u!1001 &1800331013
 PrefabInstance:
   m_ObjectHideFlags: 0

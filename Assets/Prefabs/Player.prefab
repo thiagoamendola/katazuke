@@ -77,7 +77,6 @@ Transform:
   - {fileID: 4408278630710748}
   - {fileID: 4191622513925464}
   - {fileID: 4032691159419104}
-  - {fileID: 4000133518747818}
   - {fileID: 404711923}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -117,6 +116,7 @@ MonoBehaviour:
   clothesQuantity: 10
   animator: {fileID: 0}
   holdingObject: {fileID: 0}
+  holdingPoint: {fileID: 0}
 --- !u!1 &1542001585906154
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,10 +276,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978460312871964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.865, z: 0.701}
+  m_LocalPosition: {x: -0.355, y: 0.704, z: 0.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4467062334350322}
+  m_Father: {fileID: 404711929}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &404321145
@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: abffe54957ca20d45b3d9647226fafe5, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: abffe54957ca20d45b3d9647226fafe5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

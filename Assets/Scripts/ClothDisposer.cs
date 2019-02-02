@@ -8,6 +8,8 @@ using TMPro;
 
 public class ClothDisposer : InterationSpot {
 
+    public const float DISCARDTIME = .75f;
+
     public bool requiresJoy;
 
     public override void TriggerInteraction(Player player)
@@ -27,6 +29,7 @@ public class ClothDisposer : InterationSpot {
                     allDisposersList[0].GetComponent<ParticleSystem>().Play();
                 }
                 player.animator.SetBool("hold", false);
+                StartCoroutine(HaltForAnimation(player, DISCARDTIME));
             }else if(!requiresJoy && player.holdingObject == null && player.clothesQuantity <= 0){
                 // Ending the game.
                 foreach(ParticleSystem ps in GameObject.FindObjectsOfType<ParticleSystem>())

@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 
     public PlayerNumber playerNumber;
 	public bool controlEnabled;
+	[HideInInspector]
+	public bool softControlEnabled;
 	public float speed = 5;
     public int totalClothesQuantity = 10;
     
@@ -18,12 +20,14 @@ public class Player : MonoBehaviour {
 	[HideInInspector]
 	public Animator animator;
 
-
 	new Rigidbody rigidbody;
 	Collider actionCollider;
 
 	[HideInInspector]
 	public GameObject holdingObject;
+
+    [HideInInspector]
+	public GameObject holdingPoint;
 
 	InterationSpot currentInteractionSpot;
 
@@ -32,18 +36,20 @@ public class Player : MonoBehaviour {
         animator = GetComponentInChildren<Animator>();
         actionCollider = transform.Find("ActionCollider").gameObject.GetComponent<Collider>();
         holdingObject = null;
+        holdingPoint = transform.Find("Character").Find("Rootbone").Find("Bottom").Find("Belly").Find("HoldingPoint").gameObject;
         controlEnabled = true;
+        softControlEnabled = true;
         clothesQuantity = totalClothesQuantity;
 	}
 
 	void Update() {
-		if(controlEnabled && Input.GetButtonDown("Action"+GetControllerNumber()) && currentInteractionSpot != null){
+		if(controlEnabled && softControlEnabled && Input.GetButtonDown("Action"+GetControllerNumber()) && currentInteractionSpot != null){
             currentInteractionSpot.TriggerInteraction(this);
 		}
 	}
 
 	void FixedUpdate () {
-		if(controlEnabled){
+		if(controlEnabled && softControlEnabled){
 			// Get input.
 			float rawInputX = Input.GetAxisRaw("Horizontal"+GetControllerNumber());
 			float rawInputZ = Input.GetAxisRaw("Vertical"+GetControllerNumber());

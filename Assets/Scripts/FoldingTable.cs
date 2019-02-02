@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class FoldingTable : InterationSpot{
 
-    public GameObject FoldedClothPrefab;
+    public const float FOLDINGTIME = 1.5f;
 
-    public override void TriggerInteraction(Player player)
-    {
+    public GameObject foldedClothPrefab;
+
+    public override void TriggerInteraction(Player player) {
         if (player.playerNumber == playerNumber) {
             if (player.holdingObject != null && player.holdingObject.name == "Cloth") {
                 bool joy = player.holdingObject.GetComponent<ClothInfo>().joy;
                 Destroy(player.holdingObject);
-                player.holdingObject = (GameObject)Instantiate(FoldedClothPrefab, player.transform.Find("HoldingPoint").position, player.transform.rotation, player.transform);
+                player.holdingObject = (GameObject)Instantiate(foldedClothPrefab, player.holdingPoint.transform.position, player.transform.rotation, player.holdingPoint.transform);
                 player.holdingObject.name = "FoldedCloth";
                 player.holdingObject.GetComponent<ClothInfo>().joy = joy;
-                Debug.Log("Joy: "+joy);
-                StartCoroutine(ShowThoughtBalloon(joy));
                 player.animator.SetTrigger("fold");
-                // Play animation. //<--
+                StartCoroutine(ShowThoughtBalloon(joy));
+                StartCoroutine(HaltForAnimation(player, FOLDINGTIME));
             }
         }
     }
