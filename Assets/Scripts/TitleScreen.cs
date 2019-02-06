@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class play : MonoBehaviour {
+public class TitleScreen : MonoBehaviour {
 
     public GameObject credits;
     public bool visible = false;
