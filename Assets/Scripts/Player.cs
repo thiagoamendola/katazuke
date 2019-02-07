@@ -61,8 +61,13 @@ public class Player : MonoBehaviour {
 			Vector3 smoothInput = new Vector3(smoothInputX, 0, smoothInputZ);
 			if(smoothInput.magnitude > 1)
 				smoothInput.Normalize();
-			// Move player.
-			Vector3 velocity = smoothInput * speed;
+			// Get camera basis.
+			Transform cameraTransform = Camera.main.transform;
+			Vector3 cameraForward = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
+			Vector3 cameraRight = Vector3.ProjectOnPlane(cameraTransform.right, Vector3.up).normalized;
+            // Move player.
+            Vector3 velocity = (cameraForward * smoothInput.z) + (cameraRight * smoothInput.x);
+			velocity *= speed;
 			velocity.y = rigidbody.velocity.y;
 			rigidbody.velocity = velocity;
 			// Rotate player.
