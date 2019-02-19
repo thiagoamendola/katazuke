@@ -38,7 +38,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015116478273744}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5e964f1e8d64b8040beb123079a5f53e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.2
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 0
   controlEnabled: 0
+  softControlEnabled: 0
   speed: 5
   totalClothesQuantity: 10
   clothesQuantity: 10
