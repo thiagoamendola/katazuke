@@ -19,7 +19,7 @@ public class play : MonoBehaviour {
     }
 
     public void ButtonPlay() {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void ButtonCredits() {
