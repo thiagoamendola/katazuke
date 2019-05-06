@@ -1,51 +1,68 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InputScreen : MonoBehaviour {
 
-    enum InputStage{
-        AssigningInput, AssignComplete
-    }
+	enum InputStage{
+		AssigningInput, AssignComplete
+	}
 
-    InputStage inputStage;
+	InputStage inputStage;
 
-    PlayerNumber playerNumber;
+	PlayerNumber playerNumber;
 
-    
-    void Start() {
-        InitiateScreen();
-    }
+	IEnumerator processControlFlow = null;
 
-    void Update() {
-        // Check for reset
-        if(Input.GetKey(KeyCode.Escape)){
-            Reset();
-            return;
-        }
+	void Start() {
+		InitiateScreen();
+	}
 
-        if(inputStage == InputStage.AssigningInput && Input.anyKey){
-            
-            // Check any controller input
-                // Find a way to toggle players
-            
-            // Check for keyboard inputs
+	// Controls the whole control assignment flow
+	IEnumerator ProcessControlAssignment(){
+		inputStage = InputStage.AssigningInput;
+		// Gets list of all valid players
+		var playerList = Enum.GetValues(typeof(PlayerNumber)).Cast<PlayerNumber>();
+		yield return new WaitForSeconds(1f);
+		foreach (PlayerNumber playerNumber in playerList)
+		{
+			Debug.Log("Choosing "+playerNumber.ToString());
+			bool successfulAssignment = false;
+			while(!successfulAssignment){
+				//yield return null;
+				yield return new WaitUntil(() => Input.anyKeyDown);
+				// Check if input corresponds to any input type
+				InputType? detectedType = InputManager.DetectInputType();
+				if (detectedType != null){
+					// Assign detected input for the player
+					Debug.Log("detectedType = "+detectedType.ToString());
+					InputManager.SetPlayer(playerNumber, (InputType)detectedType);
+					successfulAssignment = true;
+				}
+			}
+		}
+		Debug.Log("FIN");
+		inputStage = InputStage.AssignComplete;
+		processControlFlow = null;
+	}
 
-        }
-    }
 
+	void InitiateScreen(){
+		Debug.Log("Clear player 1 UI");
+		Debug.Log("Clear player 2 UI");
+		inputStage = InputStage.AssigningInput;
+		playerNumber = PlayerNumber.Player1;
+		if (processControlFlow != null)
+			StopCoroutine(processControlFlow);
+		processControlFlow = ProcessControlAssignment();
+		StartCoroutine(processControlFlow);
+	}
 
-
-    void InitiateScreen(){
-        Debug.Log("Clear player 1 UI");
-        Debug.Log("Clear player 2 UI");
-        inputStage = InputStage.AssigningInput;
-        playerNumber = PlayerNumber.Player1;
-    }
-
-    public void Reset(){
-        Debug.Log("Reset");
-        InputManager.Reset();
-        InitiateScreen();
-    }
+	public void Reset(){
+		Debug.Log("Reset");
+		InputManager.Reset();
+		InitiateScreen();
+	}
 }
