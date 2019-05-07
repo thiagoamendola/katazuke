@@ -37,11 +37,11 @@ public class InputScreen : MonoBehaviour {
 				//yield return null;
 				yield return new WaitUntil(() => Input.anyKeyDown);
 				// Check if input corresponds to any input type
-				InputType? detectedType = InputManager.DetectInputType();
+				ControlInput? detectedType = InputManager.DetectControlInput();
 				if (detectedType != null){
 					// Assign detected input for the player
 					controlLabels[(int)playerNumber].text = detectedType.ToString();
-					InputManager.SetPlayer(playerNumber, (InputType)detectedType);
+					InputManager.SetPlayer(playerNumber, (ControlInput)detectedType);
 					successfulAssignment = true;
 				}
 			}

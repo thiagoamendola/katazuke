@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update() {
-		if(controlEnabled && softControlEnabled && Input.GetButtonDown("Action"+GetControllerNumber()) && currentInteractionSpot != null){
+		if(controlEnabled && softControlEnabled && Input.GetButtonDown("ActionKey"+GetControllerNumber()) && currentInteractionSpot != null){
             currentInteractionSpot.TriggerInteraction(this);
 		}
 	}
@@ -47,13 +47,13 @@ public class Player : MonoBehaviour {
 	void FixedUpdate () {
 		if(controlEnabled && softControlEnabled){
 			// Get input.
-			float rawInputX = Input.GetAxisRaw("Horizontal"+GetControllerNumber());
-			float rawInputZ = Input.GetAxisRaw("Vertical"+GetControllerNumber());
+			float rawInputX = Input.GetAxisRaw("HorizontalKey"+GetControllerNumber());
+			float rawInputZ = Input.GetAxisRaw("VerticalKey"+GetControllerNumber());
 			Vector3 rawInput = new Vector3(rawInputX, 0, rawInputZ);
 			if (rawInput.magnitude > 1)
 				rawInput.Normalize();
-			float smoothInputX = Input.GetAxis("Horizontal"+GetControllerNumber());
-			float smoothInputZ = Input.GetAxis("Vertical"+GetControllerNumber());
+			float smoothInputX = Input.GetAxis("HorizontalKey"+GetControllerNumber());
+			float smoothInputZ = Input.GetAxis("VerticalKey"+GetControllerNumber());
 			Vector3 smoothInput = new Vector3(smoothInputX, 0, smoothInputZ);
 			if(smoothInput.magnitude > 1)
 				smoothInput.Normalize();
