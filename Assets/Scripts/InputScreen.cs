@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TMPro;
 
 public class InputScreen : MonoBehaviour {
 
-	enum InputStage{
+	enum InputStep{
 		AssigningInput, AssignComplete
 	}
 
-	InputStage inputStage;
+	public List<TextMeshProUGUI> controlLabels;
+
+	InputStep inputStep;
 
 	PlayerNumber playerNumber;
 
@@ -22,7 +25,7 @@ public class InputScreen : MonoBehaviour {
 
 	// Controls the whole control assignment flow
 	IEnumerator ProcessControlAssignment(){
-		inputStage = InputStage.AssigningInput;
+		inputStep = InputStep.AssigningInput;
 		// Gets list of all valid players
 		var playerList = Enum.GetValues(typeof(PlayerNumber)).Cast<PlayerNumber>();
 		yield return new WaitForSeconds(1f);
@@ -37,14 +40,14 @@ public class InputScreen : MonoBehaviour {
 				InputType? detectedType = InputManager.DetectInputType();
 				if (detectedType != null){
 					// Assign detected input for the player
-					Debug.Log("detectedType = "+detectedType.ToString());
+					controlLabels[(int)playerNumber].text = detectedType.ToString();
 					InputManager.SetPlayer(playerNumber, (InputType)detectedType);
 					successfulAssignment = true;
 				}
 			}
 		}
 		Debug.Log("FIN");
-		inputStage = InputStage.AssignComplete;
+		inputStep = InputStep.AssignComplete;
 		processControlFlow = null;
 	}
 
@@ -52,7 +55,7 @@ public class InputScreen : MonoBehaviour {
 	void InitiateScreen(){
 		Debug.Log("Clear player 1 UI");
 		Debug.Log("Clear player 2 UI");
-		inputStage = InputStage.AssigningInput;
+		inputStep = InputStep.AssigningInput;
 		playerNumber = PlayerNumber.Player1;
 		if (processControlFlow != null)
 			StopCoroutine(processControlFlow);
