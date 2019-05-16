@@ -8,18 +8,8 @@ public class TitleScreen : MonoBehaviour {
     public GameObject credits;
     public bool visible = false;
 
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
-
     public void ButtonPlay() {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("InputScreen");
     }
 
     public void ButtonCredits() {

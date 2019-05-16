@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -25,6 +26,8 @@ public class Player : MonoBehaviour {
     [HideInInspector]
 	public GameObject holdingPoint;
 
+	public ControlInput controlInput;
+
 	InterationSpot currentInteractionSpot;
 
 	void Start () {
@@ -36,24 +39,28 @@ public class Player : MonoBehaviour {
         controlEnabled = true;
         softControlEnabled = true;
         clothesQuantity = totalClothesQuantity;
+        controlInput = (ControlInput) InputManager.GetControlInput(playerNumber);
 	}
 
 	void Update() {
-		if(controlEnabled && softControlEnabled && Input.GetButtonDown("ActionKey"+GetControllerNumber()) && currentInteractionSpot != null){
+        string actionCommand = "Action" + controlInput.ToString();
+        if(controlEnabled && softControlEnabled && Input.GetButtonDown(actionCommand) && currentInteractionSpot != null){
             currentInteractionSpot.TriggerInteraction(this);
 		}
 	}
 
 	void FixedUpdate () {
 		if(controlEnabled && softControlEnabled){
-			// Get input.
-			float rawInputX = Input.GetAxisRaw("HorizontalKey"+GetControllerNumber());
-			float rawInputZ = Input.GetAxisRaw("VerticalKey"+GetControllerNumber());
+            string horizontalCommand = "Horizontal" + controlInput.ToString();
+            string verticalCommand = "Vertical" + controlInput.ToString();
+            // Get input.
+            float rawInputX = Input.GetAxisRaw(horizontalCommand);
+			float rawInputZ = Input.GetAxisRaw(verticalCommand);
 			Vector3 rawInput = new Vector3(rawInputX, 0, rawInputZ);
 			if (rawInput.magnitude > 1)
 				rawInput.Normalize();
-			float smoothInputX = Input.GetAxis("HorizontalKey"+GetControllerNumber());
-			float smoothInputZ = Input.GetAxis("VerticalKey"+GetControllerNumber());
+			float smoothInputX = Input.GetAxis(horizontalCommand);
+			float smoothInputZ = Input.GetAxis(verticalCommand);
 			Vector3 smoothInput = new Vector3(smoothInputX, 0, smoothInputZ);
 			if(smoothInput.magnitude > 1)
 				smoothInput.Normalize();
@@ -79,11 +86,6 @@ public class Player : MonoBehaviour {
 			}
 		}
     }
-
-	char GetControllerNumber(){
-		string numberString = playerNumber.ToString();
-		return numberString[numberString.Length-1];
-	}
 
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "InteractionSpot"){
