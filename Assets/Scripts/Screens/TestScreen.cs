@@ -7,7 +7,12 @@ using UnityEngine;
 public class TestScreen : GenericScreen {
 
     public override void Open() {
-        FocusCamera();
+        StartCoroutine(AsyncOpen());
+    }
+
+    IEnumerator AsyncOpen(){
+        yield return FocusCamera();
+        ScreenManager.GoToTitleScreen();
     }
 
     public override void Close() {

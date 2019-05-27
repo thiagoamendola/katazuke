@@ -13,13 +13,13 @@ public abstract class GenericScreen : MonoBehaviour{
 
     public abstract void Close();
 
-    public virtual void FocusCamera(){
+    public virtual Coroutine FocusCamera(){
         Camera cameraToUse = ScreenManager.activeCamera;
         Transform targetTransform = camera.transform;
         if (camera != cameraToUse){
             camera.gameObject.SetActive(false);
         }
-        StartCoroutine(AsyncFocusCamera(cameraToUse, targetTransform));
+        return StartCoroutine(AsyncFocusCamera(cameraToUse, targetTransform));
     }
 
     IEnumerator AsyncFocusCamera(Camera cameraToUse, Transform targetTransform){

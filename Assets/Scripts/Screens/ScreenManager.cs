@@ -29,6 +29,14 @@ public class ScreenManager : MonoBehaviour{
         }
     }
 
+    private void Awake(){
+        // If already on the scene, reference itself as the static instance.
+        if (instance != this){
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     #endregion
 
     #region Monobehaviour Methods
@@ -50,11 +58,20 @@ public class ScreenManager : MonoBehaviour{
         loadedScene.GetRootGameObjects()[0].GetComponent<GenericScreen>().Open();
     }
 
+    void SampleGoToTitleScreen(){
+        // Change to Additive
+        SceneManager.LoadScene("TitleScreen");
+    }
+
     #endregion
 
     #region Public Static Accessors
 
+    public static void GoToTitleScreen(){
+        instance.SampleGoToTitleScreen();
+    }
+
 
     #endregion
 
-}
+    }
