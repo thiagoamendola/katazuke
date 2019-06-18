@@ -6,12 +6,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class InputScreen : MonoBehaviour {
+public class InputScreen : GenericScreen {
 
 	enum InputStep{
 		AssigningInput, AssignComplete
 	}
 
+    [Header("Input Screen")]
 	public List<TextMeshProUGUI> controlLabels;
 
 	InputStep inputStep;
@@ -20,9 +21,15 @@ public class InputScreen : MonoBehaviour {
 
 	IEnumerator processControlFlow = null;
 
-	void Start() {
-		InitiateScreen();
-	}
+
+    public override void Open(){
+        FocusCamera();
+        InitiateScreen();
+    }
+
+    public override void Close(){
+
+    }
 
 	// Controls the whole control assignment flow
 	IEnumerator ProcessControlAssignment(){
@@ -50,7 +57,7 @@ public class InputScreen : MonoBehaviour {
 		Debug.Log("FIN");
 		inputStep = InputStep.AssignComplete;
 		processControlFlow = null;
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("GameScene");
     }
 
 	void InitiateScreen(){

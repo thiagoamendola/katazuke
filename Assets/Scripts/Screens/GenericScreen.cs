@@ -4,8 +4,9 @@ using UnityEngine;
 
 public abstract class GenericScreen : MonoBehaviour{
 
-    const float transitionDuration = 2.0f;
+    public const float transitionDuration = 2.0f;
 
+    [Header("Generic Screen")]
     public Camera camera;
 
 

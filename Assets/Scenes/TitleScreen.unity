@@ -818,13 +818,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2131832485}
+  - {fileID: 787796043}
   - {fileID: 733124716}
   - {fileID: 1156486928}
-  - {fileID: 787796043}
   - {fileID: 1389226212}
   - {fileID: 1942929376}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -26.178001, z: 0}
 --- !u!1 &510080127
 GameObject:
@@ -1677,7 +1677,7 @@ Transform:
   - {fileID: 318585225}
   - {fileID: 1609375926}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 154.95, z: 0}
 --- !u!1 &653626788
 GameObject:
@@ -2137,7 +2137,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 455288633}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &918029223
 PrefabInstance:
@@ -3182,7 +3182,7 @@ Transform:
   - {fileID: 102093522}
   - {fileID: 592827279}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369275742
 GameObject:
@@ -3382,9 +3382,8 @@ Transform:
   m_Children:
   - {fileID: 2098268281}
   - {fileID: 1545866054}
-  - {fileID: 2104395363}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1506143728
 GameObject:
@@ -4857,7 +4856,7 @@ GameObject:
   - component: {fileID: 2104395363}
   - component: {fileID: 2104395362}
   m_Layer: 0
-  m_Name: Vazio
+  m_Name: (!)TitleScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4875,8 +4874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8150a36795e0214d84ecba4e8263508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 944707637}
   credits: {fileID: 1886313565}
-  visible: 0
 --- !u!4 &2104395363
 Transform:
   m_ObjectHideFlags: 0
@@ -4885,11 +4884,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104395361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 211.91867, y: 189.09924, z: -37.891342}
+  m_LocalPosition: {x: 478.5, y: 230.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1489987804}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2106272591 stripped
 Transform:

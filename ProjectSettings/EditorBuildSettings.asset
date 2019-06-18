@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/InputScreen.unity
     guid: 4d9e22512a685b84dbf47b65b6ae6e3e
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/GameScene.unity
     guid: 902711e76f7d73044b76245feb6190f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/MainTest.unity
     guid: d72e67d3d2cc4ac47892fc0e6ea252db
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/TestScreen.unity
     guid: 5ddc3f4f93dc4aa41839da34a0acc41d
   m_configObjects: {}
