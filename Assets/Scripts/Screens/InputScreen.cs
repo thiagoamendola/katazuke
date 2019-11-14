@@ -37,8 +37,7 @@ public class InputScreen : GenericScreen {
 		// Gets list of all valid players
 		var playerList = Enum.GetValues(typeof(PlayerNumber)).Cast<PlayerNumber>();
 		yield return new WaitForSeconds(1f);
-		foreach (PlayerNumber playerNumber in playerList)
-		{
+		foreach (PlayerNumber playerNumber in playerList){
 			Debug.Log("Choosing "+playerNumber.ToString());
 			bool successfulAssignment = false;
 			while(!successfulAssignment){

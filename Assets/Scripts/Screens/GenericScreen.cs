@@ -14,6 +14,7 @@ public abstract class GenericScreen : MonoBehaviour{
 
     public abstract void Close();
 
+    // Uses the global camera to tween to current scene's camera position.
     public virtual Coroutine FocusCamera(){
         Camera cameraToUse = ScreenManager.activeCamera;
         Transform targetTransform = camera.transform;
