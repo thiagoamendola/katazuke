@@ -54,9 +54,10 @@ public class InputScreen : GenericScreen {
 			}
 		}
 		Debug.Log("FIN");
+		// Maybe improve here: only go to next scene when interaction input is pressed.
 		inputStep = InputStep.AssignComplete;
 		processControlFlow = null;
-        SceneManager.LoadScene("GameScene");
+		ScreenManager.GoToGameScreen();
     }
 
 	void InitiateScreen(){

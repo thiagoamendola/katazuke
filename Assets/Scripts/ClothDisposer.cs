@@ -51,7 +51,7 @@ public class ClothDisposer : InterationSpot {
 
     IEnumerator ReturnToTitle(){
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("TitleScreen");
+        ScreenManager.GoToGameScreen();
     }
 
 

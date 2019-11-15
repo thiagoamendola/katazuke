@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : GenericScreen {
 
+    [Header("UI")]
+    public GameObject uiCanvas;
+
     [Header("Title Screen")]
     public GameObject credits;
     
@@ -20,7 +23,8 @@ public class TitleScreen : GenericScreen {
     }
 
     public void ButtonPlay() {
-        //SceneManager.LoadScene("InputScreen");
+        // Disable UI
+        uiCanvas.SetActive(false);
         // Call Input Screen
         ScreenManager.GoToInputScreen();
     }

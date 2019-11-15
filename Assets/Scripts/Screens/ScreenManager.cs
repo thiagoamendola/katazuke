@@ -45,6 +45,14 @@ public class ScreenManager : MonoBehaviour{
 	public void Setup(){
 		// Set up additive load scene parameter
 		loadSceneParameters = new LoadSceneParameters(LoadSceneMode.Additive);
+		// Instantiate MainScenario with it's not instantiated
+		Scene poolScene = SceneManager.GetSceneByName(name);
+		if (poolScene.isLoaded) {
+		//if(!SceneManager.GetSceneByName(name).isLoaded){
+			Scene currentScene = SceneManager.GetActiveScene();
+			SceneManager.LoadScene("MainScenario", loadSceneParameters);
+			SceneManager.SetActiveScene(currentScene);
+		}
 		// Get active scene, camera and screen, if necessary
 		if (activeScreen == null)
 			activeScreen = GameObject.FindObjectOfType<GenericScreen>();
@@ -52,15 +60,6 @@ public class ScreenManager : MonoBehaviour{
 			activeCamera = GameObject.FindObjectOfType<Camera>();
         	activeCamera.transform.SetParent(transform);
 	}
-
-	// IEnumerator AsyncStart(){
-	//     Scene loadedScene = SceneManager.LoadScene("TestScreen", loadSceneParameters);
-	//     yield return null; // Wait one frame for the scene to load
-	//     print(loadedScene.GetRootGameObjects().Length.ToString());
-	//     print(GameObject.Find("TestScreen"));
-	//     activeScene = loadedScene;
-	//     loadedScene.GetRootGameObjects()[0].GetComponent<GenericScreen>().Open();
-	// }
 
 	IEnumerator GoToScreen(string screenName){
 		Scene oldScene = SceneManager.GetActiveScene();
@@ -89,16 +88,20 @@ public class ScreenManager : MonoBehaviour{
 
 	#region Public Static Accessors
 
+	public static void Create(){
+		if (Instance != null) {}
+	}
+
 	public static void GoToTitleScreen(){
-		Instance.StartCoroutine(Instance.GoToScreen("TitleScreen"));
+		Instance.StartCoroutine(Instance.GoToScreen("TitleScene"));
 	}
 
 	public static void GoToInputScreen(){
-		Instance.StartCoroutine(Instance.GoToScreen("InputScreen"));
+		Instance.StartCoroutine(Instance.GoToScreen("InputScene"));
 	}
 
 	public static void GoToGameScreen(){
-		Instance.StartCoroutine(Instance.GoToScreen("GameScreen"));
+		Instance.StartCoroutine(Instance.GoToScreen("GameScene"));
 	}
 
 
