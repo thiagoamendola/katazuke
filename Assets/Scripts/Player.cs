@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
 			if(smoothInput.magnitude > 1)
 				smoothInput.Normalize();
 			// Get camera basis.
-			Transform cameraTransform = Camera.main.transform;
+			Transform cameraTransform = ScreenManager.activeCamera.transform;
 			Vector3 cameraForward = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
 			Vector3 cameraRight = Vector3.ProjectOnPlane(cameraTransform.right, Vector3.up).normalized;
             // Move player.

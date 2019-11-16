@@ -46,8 +46,8 @@ public class ScreenManager : MonoBehaviour{
 		// Set up additive load scene parameter
 		loadSceneParameters = new LoadSceneParameters(LoadSceneMode.Additive);
 		// Instantiate MainScenario with it's not instantiated
-		Scene poolScene = SceneManager.GetSceneByName(name);
-		if (poolScene.isLoaded) {
+		Scene mainScenarioScene = SceneManager.GetSceneByName("MainScenario");
+		if (!mainScenarioScene.isLoaded) {
 		//if(!SceneManager.GetSceneByName(name).isLoaded){
 			Scene currentScene = SceneManager.GetActiveScene();
 			SceneManager.LoadScene("MainScenario", loadSceneParameters);

@@ -88,7 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000004, guid: ce31ed001a7dbeb4cb31db68a15918c2,
+  m_LightingDataAsset: {fileID: 112000004, guid: dac0bee60c859144f8b0ecf11085c1ca,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -579,7 +579,7 @@ Light:
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 1.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
