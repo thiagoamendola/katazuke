@@ -5,7 +5,7 @@ Developed during Global Game Jam 2019.
 ## To Do List
 
 - [x] Fix man's animation in title screen
-- [ ] Remove sliding during actions
+- [ ] Remove sliding during actions <--
 - [ ] Fix walking cycle animation
 - [ ] Improve Input Screen feedback
 - [ ] Add spark particles to joyful clothes

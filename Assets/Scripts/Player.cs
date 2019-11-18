@@ -51,6 +51,7 @@ public class Player : MonoBehaviour {
 
 	void FixedUpdate () {
 		if(controlEnabled && softControlEnabled){
+			rigidbody.isKinematic = false;
             string horizontalCommand = "Horizontal" + controlInput.ToString();
             string verticalCommand = "Vertical" + controlInput.ToString();
             // Get input.
@@ -84,6 +85,9 @@ public class Player : MonoBehaviour {
 			}else{
 				animator.SetBool("walking", false);
 			}
+		} else {
+			rigidbody.isKinematic = true;
+			rigidbody.velocity = Vector3.zero;
 		}
     }
 
