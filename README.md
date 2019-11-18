@@ -1,8 +1,10 @@
 # Katazukeru
 
+Developed during Global Game Jam 2019.
+
 ## To Do List
 
-- [ ] Fix man's animation in title screen
+- [x] Fix man's animation in title screen
 - [ ] Remove sliding during actions
 - [ ] Fix walking cycle animation
 - [ ] Improve Input Screen feedback
@@ -14,5 +16,6 @@
 - [ ] Improve winning screen UI
 - [ ] Rework title screen's UI
 
+- [ ] Add tecelation to open clothes
 - [ ] Create more stages
 - [ ] Create stage selection screen
