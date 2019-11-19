@@ -19,6 +19,6 @@ Developed during Global Game Jam 2019.
 - [ ] Improve winning screen UI
 - [ ] Rework title screen's UI
 
-- [ ] Add tecelation to open clothes
+- [x] Add tecelation to open clothes
 - [ ] Create more stages
 - [ ] Create stage selection screen
