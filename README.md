@@ -8,7 +8,7 @@ Developed during Global Game Jam 2019.
 - [x] Remove sliding during actions
 - [x] Add spark particles to joyful clothes
 - [x] Add fog particles to joyless clothes
-- [ ] Lower open cloth
+- [x] Lower open cloth
 - [ ] Add closet animation
 - [ ] Fix UV for plant pot
 - [ ] Fix walking cycle animation 
