@@ -28,7 +28,6 @@ public class ClothesPile : InterationSpot {
         yield return base.HaltForAnimation(player, time);
         player.holdingObject = (GameObject) Instantiate(ClothPrefab, player.holdingPoint.transform.position, player.transform.rotation, player.holdingPoint.transform);
         player.holdingObject.name = "Cloth";
-        player.holdingObject.GetComponent<ClothInfo>().joy = Random.Range(0f,1f) > 0.5f;
     }
 
 

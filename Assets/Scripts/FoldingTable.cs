@@ -11,10 +11,10 @@ public class FoldingTable : InterationSpot{
     public override void TriggerInteraction(Player player) {
         if (player.playerNumber == playerNumber) {
             if (player.holdingObject != null && player.holdingObject.name == "Cloth") {
-                bool joy = player.holdingObject.GetComponent<ClothInfo>().joy;
                 Destroy(player.holdingObject);
                 player.holdingObject = (GameObject)Instantiate(foldedClothPrefab, player.holdingPoint.transform.position, player.transform.rotation, player.holdingPoint.transform);
                 player.holdingObject.name = "FoldedCloth";
+                bool joy = Random.Range(0f,1f) > 0.5f;
                 player.holdingObject.GetComponent<ClothInfo>().joy = joy;
                 player.animator.SetTrigger("fold");
                 StartCoroutine(ShowThoughtBalloon(joy));
