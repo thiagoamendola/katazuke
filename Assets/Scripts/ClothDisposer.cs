@@ -17,13 +17,17 @@ public class ClothDisposer : InterationSpot {
         if (player.playerNumber == playerNumber) {
             if (player.holdingObject != null && player.holdingObject.name == "FoldedCloth" && 
                 requiresJoy == player.holdingObject.GetComponent<ClothInfo>().joy){
+                // Trigger animation
+                if(requiresJoy){
+                    GetComponent<Animator>().SetTrigger("OpenClose");
+                }
                 // Fold cloth.
                 Destroy(player.holdingObject);
                 GameObject.Find("Music"+player.playerNumber.ToString()).GetComponent<AudioSource>().volume = 0.1f + (float)(player.totalClothesQuantity-player.clothesQuantity)/(float)player.totalClothesQuantity;
                 GetComponent<AudioSource>().clip = AssetReferences.instance.clothDropClip;
                 GetComponent<AudioSource>().Play();
                 if(player.clothesQuantity <= 0){
-                    Debug.Log("Go pray!");//<--
+                    Debug.Log("Go pray!");
                     List <ClothDisposer> allDisposersList = new List<ClothDisposer>(GameObject.FindObjectsOfType<ClothDisposer>());
                     allDisposersList = allDisposersList.Where(cd => cd.playerNumber == player.playerNumber && !cd.requiresJoy).ToList();
                     allDisposersList[0].GetComponent<ParticleSystem>().Play();
