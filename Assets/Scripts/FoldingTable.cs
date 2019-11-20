@@ -8,7 +8,7 @@ public class FoldingTable : InterationSpot{
 
     public GameObject foldedClothPrefab;
 
-    public override void TriggerInteraction(Player player) {
+    public override bool TriggerInteraction(Player player) {
         if (player.playerNumber == playerNumber) {
             if (player.holdingObject != null && player.holdingObject.name == "Cloth") {
                 Destroy(player.holdingObject);
@@ -19,8 +19,10 @@ public class FoldingTable : InterationSpot{
                 player.animator.SetTrigger("fold");
                 StartCoroutine(ShowThoughtBalloon(joy));
                 StartCoroutine(HaltForAnimation(player, FOLDINGTIME));
+                return true;
             }
         }
+        return false;
     }
 
     IEnumerator ShowThoughtBalloon(bool joy){

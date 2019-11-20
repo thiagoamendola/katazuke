@@ -10,7 +10,7 @@ public class ClothesPile : InterationSpot {
     public GameObject ClothPrefab;
 
 
-    public override void TriggerInteraction(Player player){
+    public override bool TriggerInteraction(Player player){
         if(player.playerNumber == playerNumber){
             if(player.holdingObject == null && player.clothesQuantity>0){
                 player.clothesQuantity--;
@@ -20,8 +20,10 @@ public class ClothesPile : InterationSpot {
                     transform.localScale = Vector3.zero;
                 player.animator.SetBool("hold", true);
                 StartCoroutine(HaltForAnimation(player, PICKUPTIME));
+                return true;
             }
         }
+        return false;
     }
 
     public override IEnumerator HaltForAnimation(Player player, float time){

@@ -6,7 +6,7 @@ public abstract class InterationSpot : MonoBehaviour {
 
     public PlayerNumber playerNumber;
 
-    public abstract void TriggerInteraction(Player player);
+    public abstract bool TriggerInteraction(Player player);
 
     public virtual IEnumerator HaltForAnimation(Player player, float time) {
         player.softControlEnabled = false;

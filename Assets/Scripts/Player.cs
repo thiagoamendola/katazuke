@@ -22,30 +22,41 @@ public class Player : MonoBehaviour {
 
 	[HideInInspector]
 	public GameObject holdingObject;
-
     [HideInInspector]
 	public GameObject holdingPoint;
 
-	public ControlInput controlInput;
+	public ControlInput? controlInput;
+
+    [HideInInspector]
+	public GameObject mistakeThought;
 
 	InterationSpot currentInteractionSpot;
 
 	void Start () {
         rigidbody = GetComponent<Rigidbody>();
-        animator = GetComponentInChildren<Animator>();
+        animator = transform.Find("Character").GetComponent<Animator>();
         actionCollider = transform.Find("ActionCollider").gameObject.GetComponent<Collider>();
         holdingObject = null;
         holdingPoint = transform.Find("Character").Find("Rootbone").Find("Bottom").Find("Belly").Find("HoldingPoint").gameObject;
         controlEnabled = true;
         softControlEnabled = true;
         clothesQuantity = totalClothesQuantity;
-        controlInput = (ControlInput) InputManager.GetControlInput(playerNumber);
+        controlInput = (ControlInput?) InputManager.GetControlInput(playerNumber);
+		mistakeThought = transform.Find("ThoughtsHolder").Find("Mistake").gameObject;
+		Debug.Log("HEEEY");
+		Debug.Log(mistakeThought);
+		Debug.Log(transform.Find("ThoughtsHolder").Find("Mistake"));
+		Debug.Log(transform.Find("ThoughtsHolder"));
+		Debug.Log(transform);
 	}
 
 	void Update() {
         string actionCommand = "Action" + controlInput.ToString();
         if(controlEnabled && softControlEnabled && Input.GetButtonDown(actionCommand) && currentInteractionSpot != null){
-            currentInteractionSpot.TriggerInteraction(this);
+            bool success = currentInteractionSpot.TriggerInteraction(this);
+			if (!success){
+				mistakeThought.GetComponent<Animator>().SetTrigger("Show");
+			}
 		}
 	}
 

@@ -12,8 +12,7 @@ public class ClothDisposer : InterationSpot {
 
     public bool requiresJoy;
 
-    public override void TriggerInteraction(Player player)
-    {
+    public override bool TriggerInteraction(Player player){
         if (player.playerNumber == playerNumber) {
             if (player.holdingObject != null && player.holdingObject.name == "FoldedCloth" && 
                 requiresJoy == player.holdingObject.GetComponent<ClothInfo>().joy){
@@ -49,8 +48,9 @@ public class ClothDisposer : InterationSpot {
                 GameObject.Find("WinMessage").GetComponent<AudioSource>().Play();
                 StartCoroutine(ReturnToTitle());
             }
+            return true;
         }
-
+        return false;
     }
 
     IEnumerator ReturnToTitle(){

@@ -67,7 +67,9 @@ public class InputManager : MonoBehaviour{
 
 	// Gets input type assigned for provided player.
 	public static ControlInput? GetControlInput(PlayerNumber playerNumber){
-		return inputMappings[playerNumber];
+		if(inputMappings.ContainsKey(playerNumber))
+			return inputMappings[playerNumber];
+		return (ControlInput?) ControlInput.Key1;
 	}
 
 	// Gets player assigned for provided input type.

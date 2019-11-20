@@ -9,16 +9,18 @@ Developed during Global Game Jam 2019.
 - [x] Add spark particles to joyful clothes
 - [x] Add fog particles to joyless clothes
 - [x] Lower open cloth
-- [ ] Add closet animation
+- [x] Add closet animation
+- [x] Add box animation
+- [x] Add feedback for failure action for clothing
+- [ ] Add "thank" flying hud when finishing
+- [ ] Add arrows for points of interest
 - [ ] Fix UV for plant pot
 - [ ] Fix walking cycle animation 
-- [ ] Improve Input Screen feedback
-- [ ] Add arrows for points of interest
-- [ ] Add "thank" flying hud when finishing
-- [ ] Add feedback for failure action for clothing
+- [ ] Improve Input Screen UI
 - [ ] Improve winning screen UI
-- [ ] Rework title screen's UI
 
 - [x] Add tecelation to open clothes
-- [ ] Create more stages
+- [ ] Rework title screen's UI
+- [ ] Rework title screen's UI
 - [ ] Create stage selection screen
+- [ ] Create more stages
