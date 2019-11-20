@@ -18,9 +18,9 @@ public class ClothDisposer : InterationSpot {
             if (player.holdingObject != null && player.holdingObject.name == "FoldedCloth" && 
                 requiresJoy == player.holdingObject.GetComponent<ClothInfo>().joy){
                 // Trigger animation
-                if(requiresJoy){
-                    GetComponent<Animator>().SetTrigger("OpenClose");
-                }
+                //if(requiresJoy){
+                GetComponent<Animator>().SetTrigger("OpenClose");
+                //}
                 // Fold cloth.
                 Destroy(player.holdingObject);
                 GameObject.Find("Music"+player.playerNumber.ToString()).GetComponent<AudioSource>().volume = 0.1f + (float)(player.totalClothesQuantity-player.clothesQuantity)/(float)player.totalClothesQuantity;
