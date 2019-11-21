@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
 	public ControlInput? controlInput;
 
     [HideInInspector]
-	public GameObject mistakeThought;
+	public ThoughtBalloon mistakeThought;
 
 	InterationSpot currentInteractionSpot;
 
@@ -42,12 +42,7 @@ public class Player : MonoBehaviour {
         softControlEnabled = true;
         clothesQuantity = totalClothesQuantity;
         controlInput = (ControlInput?) InputManager.GetControlInput(playerNumber);
-		mistakeThought = transform.Find("ThoughtsHolder").Find("Mistake").gameObject;
-		Debug.Log("HEEEY");
-		Debug.Log(mistakeThought);
-		Debug.Log(transform.Find("ThoughtsHolder").Find("Mistake"));
-		Debug.Log(transform.Find("ThoughtsHolder"));
-		Debug.Log(transform);
+		mistakeThought = transform.Find("ThoughtsHolder").Find("Mistake").gameObject.GetComponent<ThoughtBalloon>();
 	}
 
 	void Update() {
@@ -55,7 +50,7 @@ public class Player : MonoBehaviour {
         if(controlEnabled && softControlEnabled && Input.GetButtonDown(actionCommand) && currentInteractionSpot != null){
             bool success = currentInteractionSpot.TriggerInteraction(this);
 			if (!success){
-				mistakeThought.GetComponent<Animator>().SetTrigger("Show");
+				mistakeThought.Show();
 			}
 		}
 	}

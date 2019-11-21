@@ -12,8 +12,8 @@ Developed during Global Game Jam 2019.
 - [x] Add closet animation
 - [x] Add box animation
 - [x] Add feedback for failure action for clothing
+- [ ] Add arrows for points of interest <--
 - [ ] Add "thank" flying hud when finishing
-- [ ] Add arrows for points of interest
 - [ ] Fix UV for plant pot
 - [ ] Fix walking cycle animation 
 - [ ] Improve Input Screen UI
