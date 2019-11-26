@@ -31,8 +31,8 @@ public class Player : MonoBehaviour {
     [HideInInspector]
 	public ThoughtBalloon mistakeThought;
 
-	InterationSpot currentInteractionSpot;
-	List<InterationSpot> previousNextSpots;
+	InteractionSpot currentInteractionSpot;
+	List<InteractionSpot> previousNextSpots;
 
 	void Start () {
         rigidbody = GetComponent<Rigidbody>();
@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
 		print(transform.name);
 		print(GameObject.Find("Room").name);
 		print(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.name);
-		previousNextSpots = new List<ClothesPile>(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.GetComponentsInChildren<ClothesPile>()).Cast<InterationSpot>().ToList();
+		previousNextSpots = new List<ClothesPile>(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.GetComponentsInChildren<ClothesPile>().Where(r => r.playerNumber == playerNumber)).Cast<InteractionSpot>().ToList();
 	}
 
 	void Update() {
@@ -60,11 +60,11 @@ public class Player : MonoBehaviour {
 				mistakeThought.Show();
 			}else{
 				if (previousNextSpots != null)
-					foreach(InterationSpot spot in previousNextSpots){
+					foreach(InteractionSpot spot in previousNextSpots){
 						spot.hint.Hide();
 					}
-				List<InterationSpot> nextSpots = currentInteractionSpot.GetHintableNextSpots();
-				foreach(InterationSpot spot in nextSpots){
+				List<InteractionSpot> nextSpots = currentInteractionSpot.GetHintableNextSpots();
+				foreach(InteractionSpot spot in nextSpots){
 					print(spot.name);
 					print(spot.hint.name);
 					spot.hint.Show();
@@ -118,13 +118,13 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "InteractionSpot"){
-            currentInteractionSpot = other.gameObject.GetComponent<InterationSpot>();
+            currentInteractionSpot = other.gameObject.GetComponent<InteractionSpot>();
 		}
 	}
 
 	void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "InteractionSpot"){
-            if(currentInteractionSpot == other.gameObject.GetComponent<InterationSpot>())
+            if(currentInteractionSpot == other.gameObject.GetComponent<InteractionSpot>())
                 currentInteractionSpot = null;
 		}
     }

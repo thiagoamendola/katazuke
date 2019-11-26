@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class FoldingTable : InterationSpot{
+public class FoldingTable : InteractionSpot{
 
     public const float FOLDINGTIME = 1.5f;
 
@@ -34,7 +34,7 @@ public class FoldingTable : InterationSpot{
         Destroy(balloon);
     }
 
-    public override List<InterationSpot> GetHintableNextSpots(){
+    public override List<InteractionSpot> GetHintableNextSpots(){
         List<ClothDisposer> list = new List<ClothDisposer>(
             transform.parent.gameObject.GetComponentsInChildren<ClothDisposer>());
         List<int> removeList = new List<int>();
@@ -43,7 +43,7 @@ public class FoldingTable : InterationSpot{
                 list.RemoveAt(i);
             }
         }
-        return list.Cast<InterationSpot>().ToList();
+        return list.Cast<InteractionSpot>().ToList();
     }
 
 }

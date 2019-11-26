@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ClothesPile : InterationSpot {
+public class ClothesPile : InteractionSpot {
 
     public const float DISAPPEARAMOUNT = 0.4f;
     public const float PICKUPTIME = .75f;
@@ -38,7 +38,7 @@ public class ClothesPile : InterationSpot {
     }
 
 
-    public override List<InterationSpot> GetHintableNextSpots(){
+    public override List<InteractionSpot> GetHintableNextSpots(){
         List<FoldingTable> list = new List<FoldingTable>(
             transform.parent.gameObject.GetComponentsInChildren<FoldingTable>());
         for(int i=list.Count-1 ; i >= 0 ; i--){
@@ -46,7 +46,7 @@ public class ClothesPile : InterationSpot {
                 list.RemoveAt(i);
             }
         }
-        return list.Cast<InterationSpot>().ToList();
+        return list.Cast<InteractionSpot>().ToList();
     }
 
 

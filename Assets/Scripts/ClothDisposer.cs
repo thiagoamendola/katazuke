@@ -6,7 +6,7 @@ using System.Linq;
 using TMPro;
 
 
-public class ClothDisposer : InterationSpot {
+public class ClothDisposer : InteractionSpot {
 
     public const float DISCARDTIME = .75f;
 
@@ -58,14 +58,14 @@ public class ClothDisposer : InterationSpot {
         ScreenManager.GoToTitleScreen();
     }
 
-    public override List<InterationSpot> GetHintableNextSpots(){
+    public override List<InteractionSpot> GetHintableNextSpots(){
         List<ClothesPile> list = new List<ClothesPile>(transform.parent.gameObject.GetComponentsInChildren<ClothesPile>());
         for(int i=list.Count-1 ; i >= 0 ; i--){
             if(list[i].playerNumber != playerNumber){
                 list.RemoveAt(i);
             }
         }
-        return list.Cast<InterationSpot>().ToList();
+        return list.Cast<InteractionSpot>().ToList();
     }
 
 
