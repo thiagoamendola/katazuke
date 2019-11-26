@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ClothesPile : InterationSpot {
@@ -9,6 +10,10 @@ public class ClothesPile : InterationSpot {
 
     public GameObject ClothPrefab;
 
+
+    void Start(){
+        hint.Show();
+    }
 
     public override bool TriggerInteraction(Player player){
         if(player.playerNumber == playerNumber){
@@ -30,6 +35,18 @@ public class ClothesPile : InterationSpot {
         yield return base.HaltForAnimation(player, time);
         player.holdingObject = (GameObject) Instantiate(ClothPrefab, player.holdingPoint.transform.position, player.transform.rotation, player.holdingPoint.transform);
         player.holdingObject.name = "Cloth";
+    }
+
+
+    public override List<InterationSpot> GetHintableNextSpots(){
+        List<FoldingTable> list = new List<FoldingTable>(
+            transform.parent.gameObject.GetComponentsInChildren<FoldingTable>());
+        for(int i=list.Count-1 ; i >= 0 ; i--){
+            if(list[i].playerNumber != playerNumber){
+                list.RemoveAt(i);
+            }
+        }
+        return list.Cast<InterationSpot>().ToList();
     }
 
 

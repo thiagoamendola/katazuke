@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FoldingTable : InterationSpot{
@@ -31,6 +32,18 @@ public class FoldingTable : InterationSpot{
         GameObject balloon = (GameObject) Instantiate(balloonPrefab, transform.position + balloonPrefab.transform.position, Quaternion.identity, gameObject.transform);//<--
         yield return new WaitForSeconds(2f);//<--
         Destroy(balloon);
+    }
+
+    public override List<InterationSpot> GetHintableNextSpots(){
+        List<ClothDisposer> list = new List<ClothDisposer>(
+            transform.parent.gameObject.GetComponentsInChildren<ClothDisposer>());
+        List<int> removeList = new List<int>();
+        for(int i=list.Count-1 ; i >= 0 ; i--){
+            if(list[i].playerNumber != playerNumber){
+                list.RemoveAt(i);
+            }
+        }
+        return list.Cast<InterationSpot>().ToList();
     }
 
 }

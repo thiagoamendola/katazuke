@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour {
 	public ThoughtBalloon mistakeThought;
 
 	InterationSpot currentInteractionSpot;
+	List<InterationSpot> previousNextSpots;
 
 	void Start () {
         rigidbody = GetComponent<Rigidbody>();
@@ -43,6 +45,11 @@ public class Player : MonoBehaviour {
         clothesQuantity = totalClothesQuantity;
         controlInput = (ControlInput?) InputManager.GetControlInput(playerNumber);
 		mistakeThought = transform.Find("ThoughtsHolder").Find("Mistake").gameObject.GetComponent<ThoughtBalloon>();
+		print("WOW");
+		print(transform.name);
+		print(GameObject.Find("Room").name);
+		print(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.name);
+		previousNextSpots = new List<ClothesPile>(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.GetComponentsInChildren<ClothesPile>()).Cast<InterationSpot>().ToList();
 	}
 
 	void Update() {
@@ -51,6 +58,18 @@ public class Player : MonoBehaviour {
             bool success = currentInteractionSpot.TriggerInteraction(this);
 			if (!success){
 				mistakeThought.Show();
+			}else{
+				if (previousNextSpots != null)
+					foreach(InterationSpot spot in previousNextSpots){
+						spot.hint.Hide();
+					}
+				List<InterationSpot> nextSpots = currentInteractionSpot.GetHintableNextSpots();
+				foreach(InterationSpot spot in nextSpots){
+					print(spot.name);
+					print(spot.hint.name);
+					spot.hint.Show();
+				}
+				previousNextSpots = nextSpots;
 			}
 		}
 	}

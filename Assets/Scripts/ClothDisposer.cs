@@ -58,5 +58,15 @@ public class ClothDisposer : InterationSpot {
         ScreenManager.GoToTitleScreen();
     }
 
+    public override List<InterationSpot> GetHintableNextSpots(){
+        List<ClothesPile> list = new List<ClothesPile>(transform.parent.gameObject.GetComponentsInChildren<ClothesPile>());
+        for(int i=list.Count-1 ; i >= 0 ; i--){
+            if(list[i].playerNumber != playerNumber){
+                list.RemoveAt(i);
+            }
+        }
+        return list.Cast<InterationSpot>().ToList();
+    }
+
 
 }
