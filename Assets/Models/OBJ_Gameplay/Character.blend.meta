@@ -15,6 +15,19 @@ ModelImporter:
     100018: Head
     100020: Main_Body
     100022: Rootbone
+    100024: Cabelo Homem
+    100026: Cabelo Mulher
+    100028: Cabelo Mulher 2
+    100030: Foco
+    100032: Foco_end
+    100034: Hand_Left_end
+    100036: Hand_Right_end
+    100038: Head.001
+    100040: Head.001_end
+    100042: Head_end
+    100044: Main Body
+    100046: Pole
+    100048: Pole_end
     400000: Belly
     400002: Bottom
     400004: Cabelo_Homem
@@ -27,6 +40,19 @@ ModelImporter:
     400018: Head
     400020: Main_Body
     400022: Rootbone
+    400024: Cabelo Homem
+    400026: Cabelo Mulher
+    400028: Cabelo Mulher 2
+    400030: Foco
+    400032: Foco_end
+    400034: Hand_Left_end
+    400036: Hand_Right_end
+    400038: Head.001
+    400040: Head.001_end
+    400042: Head_end
+    400044: Main Body
+    400046: Pole
+    400048: Pole_end
     2100000: Men_Ken
     2100002: Hair_Marie
     2100004: Main_Body
@@ -35,6 +61,10 @@ ModelImporter:
     4300002: Cabelo_Mulher
     4300004: Main_Body
     4300006: Cabelo_Mulher_2
+    4300008: Cabelo Homem
+    4300010: Cabelo Mulher
+    4300012: Main Body
+    4300014: Cabelo Mulher 2
     7400000: Default Take
     7400002: Angry
     7400004: Fold
@@ -49,6 +79,10 @@ ModelImporter:
     13700002: Cabelo_Mulher
     13700004: Cabelo_Mulher_2
     13700006: Main_Body
+    13700008: Cabelo Homem
+    13700010: Cabelo Mulher
+    13700012: Cabelo Mulher 2
+    13700014: Main Body
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
@@ -128,7 +162,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Angry
-      takeName: Angry
+      takeName: Rootbone|Angry
       firstFrame: 0
       lastFrame: 34
       wrapMode: 0
@@ -156,7 +190,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Fold
-      takeName: Fold
+      takeName: Rootbone|Fold
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -184,9 +218,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Idle
-      takeName: Idle
+      takeName: Rootbone|Idle
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 47
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -212,9 +246,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Pick
-      takeName: Pick
-      firstFrame: -1
-      lastFrame: 14
+      takeName: Rootbone|Pick
+      firstFrame: 0
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -240,7 +274,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Praise
-      takeName: Praise
+      takeName: Rootbone|Praise
       firstFrame: 0
       lastFrame: 19
       wrapMode: 0
@@ -268,7 +302,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: TPose
-      takeName: TPose
+      takeName: Rootbone|TPose
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -296,9 +330,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk
-      takeName: Walk
-      firstFrame: -1
-      lastFrame: 36
+      takeName: Rootbone|Walk
+      firstFrame: 0
+      lastFrame: 37
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -324,9 +358,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk_Hold
-      takeName: Walk_Hold
-      firstFrame: -1
-      lastFrame: 36
+      takeName: Rootbone|Walk_Hold
+      firstFrame: 0
+      lastFrame: 37
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
