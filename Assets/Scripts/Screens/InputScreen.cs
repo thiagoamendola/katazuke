@@ -13,6 +13,7 @@ public class InputScreen : GenericScreen {
 	}
 
     [Header("Input Screen")]
+	public List<Animator> wardrobeList;
 	public List<TextMeshProUGUI> controlLabels;
 
 	InputStep inputStep;
@@ -36,12 +37,17 @@ public class InputScreen : GenericScreen {
 		inputStep = InputStep.AssigningInput;
 		// Gets list of all valid players
 		var playerList = Enum.GetValues(typeof(PlayerNumber)).Cast<PlayerNumber>();
-		yield return new WaitForSeconds(1f);
+		// Close all wardrobes
+		foreach (PlayerNumber playerNumber in playerList)
+			wardrobeList[(int)playerNumber].SetTrigger("Close");
+		yield return new WaitForSeconds(transitionDuration + 0f);
 		foreach (PlayerNumber playerNumber in playerList){
 			Debug.Log("Choosing "+playerNumber.ToString());
 			bool successfulAssignment = false;
 			while(!successfulAssignment){
-				//yield return null;
+				// Open player's wardrobe
+				wardrobeList[(int)playerNumber].SetTrigger("Open");
+				// Wait for input
 				yield return new WaitUntil(() => Input.anyKeyDown);
 				// Check if input corresponds to any input type
 				ControlInput? detectedType = InputManager.DetectControlInput();
@@ -52,8 +58,12 @@ public class InputScreen : GenericScreen {
 					successfulAssignment = true;
 				}
 			}
+			// Close player's wardrobe
+			wardrobeList[(int)playerNumber].SetTrigger("Close");
 		}
 		Debug.Log("FIN");
+		yield return new WaitForSeconds(1f);
+		// Disappear with HUD
 		// Maybe improve here: only go to next scene when interaction input is pressed.
 		inputStep = InputStep.AssignComplete;
 		processControlFlow = null;
