@@ -18,7 +18,8 @@ Developed during Global Game Jam 2019.
 - [ ] Improve Input Screen UI
     - [x] Add wardrobes
     - [x] Add input carousel UI
-    - [ ] Add selected input UI
+    - [x] Add selected input UI
+    - [ ] Solve bug at input end
     - [ ] Add characters
 - [ ] Improve winning screen UI
 

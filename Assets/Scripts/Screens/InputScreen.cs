@@ -14,6 +14,7 @@ public class InputScreen : GenericScreen {
 
     [Header("Input Screen")]
 	public List<Animator> wardrobeList;
+	public List<InputSampler> inputSamplerList;
 	public List<TextMeshProUGUI> controlLabels;
 
 	InputStep inputStep;
@@ -44,6 +45,7 @@ public class InputScreen : GenericScreen {
 		foreach (PlayerNumber playerNumber in playerList){
 			Debug.Log("Choosing "+playerNumber.ToString());
 			bool successfulAssignment = false;
+			int detectedTypeIndex = 0;
 			while(!successfulAssignment){
 				// Open player's wardrobe
 				wardrobeList[(int)playerNumber].SetTrigger("Open");
@@ -55,11 +57,13 @@ public class InputScreen : GenericScreen {
 					// Assign detected input for the player
 					controlLabels[(int)playerNumber].text = detectedType.ToString();
 					InputManager.SetPlayer(playerNumber, (ControlInput)detectedType);
+					detectedTypeIndex = (int)(ControlInput)detectedType;
 					successfulAssignment = true;
 				}
 			}
 			// Close player's wardrobe
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
+			inputSamplerList[(int)playerNumber].SelectInput(detectedTypeIndex);
 		}
 		Debug.Log("FIN");
 		// Add countdown
