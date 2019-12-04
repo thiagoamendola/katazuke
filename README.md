@@ -17,7 +17,7 @@ Developed during Global Game Jam 2019.
 - [x] Fix walking cycle animation
 - [ ] Improve Input Screen UI
     - [x] Add wardrobes
-    - [ ] Add input carousel UI
+    - [x] Add input carousel UI
     - [ ] Add selected input UI
     - [ ] Add characters
 - [ ] Improve winning screen UI

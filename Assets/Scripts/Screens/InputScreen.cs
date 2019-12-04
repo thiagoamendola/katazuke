@@ -62,7 +62,8 @@ public class InputScreen : GenericScreen {
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
 		}
 		Debug.Log("FIN");
-		yield return new WaitForSeconds(1f);
+		// Add countdown
+		yield return new WaitForSeconds(2f);
 		// Disappear with HUD
 		// Maybe improve here: only go to next scene when interaction input is pressed.
 		inputStep = InputStep.AssignComplete;
