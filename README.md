@@ -14,8 +14,12 @@ Developed during Global Game Jam 2019.
 - [x] Add feedback for failure action for clothing
 - [x] Add arrows for points of interest
 - [x] Fix UV for plant pot
-- [ ] Fix walking cycle animation
+- [x] Fix walking cycle animation
 - [ ] Improve Input Screen UI
+    - [x] Add wardrobes
+    - [ ] Add input carousel UI
+    - [ ] Add selected input UI
+    - [ ] Add characters
 - [ ] Improve winning screen UI
 
 - [x] Add tecelation to open clothes
