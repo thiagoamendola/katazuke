@@ -19,8 +19,7 @@ Developed during Global Game Jam 2019.
     - [x] Add wardrobes
     - [x] Add input carousel UI
     - [x] Add selected input UI
-    - [ ] Solve bug at input end
-    - [ ] Add characters
+    - [x] Solve bug at input end
 - [ ] Improve winning screen UI
 
 - [x] Add tecelation to open clothes

@@ -39,8 +39,10 @@ public class InputScreen : GenericScreen {
 		// Gets list of all valid players
 		var playerList = Enum.GetValues(typeof(PlayerNumber)).Cast<PlayerNumber>();
 		// Close all wardrobes
-		foreach (PlayerNumber playerNumber in playerList)
+		foreach (PlayerNumber playerNumber in playerList){
+			wardrobeList[(int)playerNumber].ResetTrigger("Open");
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
+		}
 		yield return new WaitForSeconds(transitionDuration + 0f);
 		foreach (PlayerNumber playerNumber in playerList){
 			Debug.Log("Choosing "+playerNumber.ToString());
@@ -62,6 +64,7 @@ public class InputScreen : GenericScreen {
 				}
 			}
 			// Close player's wardrobe
+			wardrobeList[(int)playerNumber].ResetTrigger("Open");
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
 			inputSamplerList[(int)playerNumber].SelectInput(detectedTypeIndex);
 		}
