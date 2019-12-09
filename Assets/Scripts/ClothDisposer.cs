@@ -18,7 +18,7 @@ public class ClothDisposer : InteractionSpot {
                 requiresJoy == player.holdingObject.GetComponent<ClothInfo>().joy){
                 // Trigger animation
                 //if(requiresJoy){
-                GetComponent<Animator>().SetTrigger("OpenClose");
+                GetComponentsInChildren<Animator>()[1].SetTrigger("OpenClose");
                 //}
                 // Fold cloth.
                 Destroy(player.holdingObject);
