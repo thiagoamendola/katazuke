@@ -14,6 +14,11 @@ ModelImporter:
     100016: Direita
     100018: Esquerda
     100020: Root
+    100022: Armario caixa
+    100024: Armario.001
+    100026: Cima_end
+    100028: Direita_end
+    100030: Esquerda_end
     400000: Armario_caixa
     400002: Caixas
     400004: Plano
@@ -25,6 +30,11 @@ ModelImporter:
     400016: Direita
     400018: Esquerda
     400020: Root
+    400022: Armario caixa
+    400024: Armario.001
+    400026: Cima_end
+    400028: Direita_end
+    400030: Esquerda_end
     2100000: Wardrobe
     2100002: Wardrobe_box
     2100004: Material
@@ -35,23 +45,32 @@ ModelImporter:
     2300004: Plano
     2300006: Porta
     2300008: //RootNode
+    2300010: Armario caixa
     3300000: Armario_caixa
     3300002: Caixas
     3300004: Plano
     3300006: Porta
     3300008: //RootNode
+    3300010: Armario caixa
     4300000: Armario_001
     4300002: Armario_caixa
     4300004: Caixas
     4300006: Plano
     4300008: Porta
+    4300010: Armario.001
+    4300012: Armario caixa
     7400000: Default Take
     7400002: Closed
     7400004: Idle
     7400006: Open
+    7400008: Armature|Closed
+    7400010: Armature|Idle
+    7400012: Armature|Open
+    7400014: Plano|Idle
     9500000: //RootNode
     13700000: Armario_001
     13700002: Porta
+    13700004: Armario.001
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
