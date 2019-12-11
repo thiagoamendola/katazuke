@@ -20,8 +20,18 @@ Developed during Global Game Jam 2019.
     - [x] Add input carousel UI
     - [x] Add selected input UI
     - [x] Solve bug at input end
+- [ ] Remove direct references to models
+    - [x] Wardrobe
+    - [x] Discard Box
+    - [x] Cloth Pile
+    - [ ] Folding Table
+    - [ ] Plant Pot
+    - [ ] Plant Pot
 - [ ] Improve winning screen UI
-- [ ] Add M button to Arrow keys asset
+- [ ] Improve joyless particle
+- [ ] Remove previous balloons
+- [ ] Fix error when bringing cloth to wrong interaction spot
+- [ ] Add M button to Arrow keys asset and so on
 - [x] Add tecelation to open clothes
 - [ ] Rework title screen's UI
 
