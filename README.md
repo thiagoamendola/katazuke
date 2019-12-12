@@ -20,13 +20,13 @@ Developed during Global Game Jam 2019.
     - [x] Add input carousel UI
     - [x] Add selected input UI
     - [x] Solve bug at input end
-- [ ] Remove direct references to models
+- [x] Remove direct references to models
     - [x] Wardrobe
     - [x] Discard Box
     - [x] Cloth Pile
-    - [ ] Folding Table
-    - [ ] Plant Pot
-    - [ ] Plant Pot
+    - [x] Folding Table
+    - [x] Plant Pot
+- [ ] Add all 4 main controller buttons to possible inputs
 - [ ] Improve winning screen UI
 - [ ] Improve joyless particle
 - [ ] Remove previous balloons
