@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5048323675396009498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6261708324513267498, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_Name
+      value: FoldingTableWoman
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.367304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2063539
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.125961
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267499, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267500, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: playerNumber
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261708324513267500, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 1143650120157302266}
+    - target: {fileID: 6261708324513267500, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: foldedClothPrefab
+      value: 
+      objectReference: {fileID: 4336522700159911241, guid: 6dadbbc4424a6824498a68afcfc3487b,
+        type: 3}
+    - target: {fileID: 6261708325872123772, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 14461e489d7656247b49af5c56e1fdef, type: 2}
+    - target: {fileID: 7912782444070741173, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.078431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7912782444070741173, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.30588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 7912782444070741173, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7887c65a53f7c8e4e8c6ebca046946f6, type: 3}
+--- !u!114 &1143650120157302266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5318804052990190560, guid: 7887c65a53f7c8e4e8c6ebca046946f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5048323675396009498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69de7780970ae484b97a2294d845cb9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
