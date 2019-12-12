@@ -26,14 +26,15 @@ Developed during Global Game Jam 2019.
     - [x] Cloth Pile
     - [x] Folding Table
     - [x] Plant Pot
-- [ ] Add all 4 main controller buttons to possible inputs
+- [x] Add all 4 main controller buttons to possible inputs
+- [ ] Fix error when bringing cloth to wrong interaction spot
+- [ ] Remove previous balloons
 - [ ] Improve winning screen UI
 - [ ] Improve joyless particle
-- [ ] Remove previous balloons
-- [ ] Fix error when bringing cloth to wrong interaction spot
 - [ ] Add M button to Arrow keys asset and so on
 - [x] Add tecelation to open clothes
 - [ ] Rework title screen's UI
+- [ ] Create tutorial
 
 --
 
