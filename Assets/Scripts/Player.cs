@@ -119,13 +119,16 @@ public class Player : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "InteractionSpot"){
             currentInteractionSpot = other.gameObject.GetComponent<InteractionSpot>();
+			currentInteractionSpot.hint.SetSelectable(true);
 		}
 	}
 
 	void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "InteractionSpot"){
-            if(currentInteractionSpot == other.gameObject.GetComponent<InteractionSpot>())
+            if(currentInteractionSpot == other.gameObject.GetComponent<InteractionSpot>()){
+				currentInteractionSpot.hint.SetSelectable(false);
                 currentInteractionSpot = null;
+			}
 		}
     }
 }

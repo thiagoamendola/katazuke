@@ -5,7 +5,18 @@ using UnityEngine;
 public class ThoughtBalloon : MonoBehaviour
 {
 
+    private Color SELECTABLECOLOR = Color.white;
+
+    public bool modulatable = true;
+
     public bool loop = false;
+
+    Color mainColor;
+
+    void Start(){
+        if(modulatable)
+            mainColor = GetComponent<SpriteRenderer>().color;
+    }
 
     void Update(){
         if(GetComponent<SpriteRenderer>() != null){
@@ -29,5 +40,12 @@ public class ThoughtBalloon : MonoBehaviour
             GetComponent<Animator>().SetBool("ShowLoop", false);
         }
         gameObject.SetActive(false);
+    }
+
+    public void SetSelectable(bool inRange){
+        if(inRange)
+            GetComponent<SpriteRenderer>().color = SELECTABLECOLOR;
+        else
+            GetComponent<SpriteRenderer>().color = mainColor;
     }
 }

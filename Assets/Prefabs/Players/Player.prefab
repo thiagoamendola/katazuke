@@ -348,6 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69de7780970ae484b97a2294d845cb9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modulatable: 0
   loop: 0
 --- !u!95 &9193285673602793675
 Animator:
