@@ -16,7 +16,9 @@ public class ThoughtBalloon : MonoBehaviour
     public void Show(){
         gameObject.SetActive(true);
         if(!loop){
-            GetComponent<Animator>().SetTrigger("Show");
+            if(!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("thoughtballoon_show")){
+                GetComponent<Animator>().SetTrigger("Show");
+            }
         }else{
             GetComponent<Animator>().SetBool("ShowLoop", true);
         }
