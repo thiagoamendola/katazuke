@@ -18,7 +18,7 @@ public class FoldingTable : InteractionSpot{
                 bool joy = Random.Range(0f,1f) > 0.5f;
                 player.holdingObject.GetComponent<ClothInfo>().joy = joy;
                 player.animator.SetTrigger("fold");
-                StartCoroutine(ShowThoughtBalloon(joy));
+                //StartCoroutine(ShowThoughtBalloon(joy));
                 StartCoroutine(HaltForAnimation(player, FOLDINGTIME));
                 return true;
             }

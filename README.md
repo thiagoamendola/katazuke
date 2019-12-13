@@ -28,7 +28,7 @@ Developed during Global Game Jam 2019.
     - [x] Plant Pot
 - [x] Add all 4 main controller buttons to possible inputs
 - [x] Fix error when bringing cloth to wrong interaction spot
-- [ ] Remove previous balloons
+- [x] Remove previous balloons
 - [ ] Improve winning screen UI
 - [ ] Improve joyless particle
 - [ ] Add M button to Arrow keys asset and so on
