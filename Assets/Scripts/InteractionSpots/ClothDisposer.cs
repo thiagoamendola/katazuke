@@ -32,6 +32,7 @@ public class ClothDisposer : InteractionSpot {
                 }
                 player.animator.SetBool("hold", false);
                 StartCoroutine(HaltForAnimation(player, DISCARDTIME));
+                return true;
             }else if(!requiresJoy && player.holdingObject == null && player.clothesQuantity <= 0){
                 // Ending the game.
                 foreach(ParticleSystem ps in GameObject.FindObjectsOfType<ParticleSystem>())
@@ -46,8 +47,8 @@ public class ClothDisposer : InteractionSpot {
                 GameObject.Find("WinMessage").GetComponent<TextMeshProUGUI>().text = player.playerNumber.ToString()+" Wins";
                 GameObject.Find("WinMessage").GetComponent<AudioSource>().Play();
                 StartCoroutine(ReturnToTitle());
+                return true;
             }
-            return true;
         }
         return false;
     }
