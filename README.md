@@ -29,11 +29,13 @@ Developed during Global Game Jam 2019.
 - [x] Add all 4 main controller buttons to possible inputs
 - [x] Fix error when bringing cloth to wrong interaction spot
 - [x] Remove previous balloons
-- [ ] Improve winning screen UI
+- [x] Add feedback when player can interact with interaction spot
+- [x] Add M button to Arrow keys asset and so on
 - [ ] Improve joyless particle
-- [ ] Add M button to Arrow keys asset and so on
-- [ ] Add feedback when player can interact with interaction spot
+- [ ] Improve winning screen UI
+- [ ] Add characters to end of input screen
 - [x] Add tecelation to open clothes
+- [ ] Smooth transition between scenes
 - [ ] Rework title screen's UI
 - [ ] Create tutorial
 
