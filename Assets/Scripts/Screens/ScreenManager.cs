@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -65,14 +66,18 @@ public class ScreenManager : MonoBehaviour{
 		Scene oldScene = SceneManager.GetActiveScene();
 		GenericScreen oldScreen = activeScreen;
 		// Load new scene and set as active.
-		Debug.Log(loadSceneParameters);
-        print(oldScene.name);
+		Debug.Log("CHANGING SCENES");
+		Debug.Log("[LALALA]"+loadSceneParameters);
+        Debug.Log("[LALALA]"+oldScene.name);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(screenName, loadSceneParameters);
 		yield return asyncLoad;
 		Scene loadedScene = SceneManager.GetSceneByName(screenName);
+		Debug.Log("[LALALA]"+loadedScene.name);
 		SceneManager.SetActiveScene(loadedScene);
 		// Get and open new screen
-		activeScreen = loadedScene.GetRootGameObjects()[0].GetComponent<GenericScreen>();
+		activeScreen = loadedScene.GetRootGameObjects().Where(obj => obj.GetComponent<GenericScreen>() != null).Cast<GameObject>().First().GetComponent<GenericScreen>();
+		// Debug.Log("[LALALA]"+loadedScene.GetRootGameObjects()[0].name);
+		Debug.Log("[LALALA]"+activeScreen.name);
 		activeScreen.Open();
 		// Close old screen.
 		if (oldScreen != null)
