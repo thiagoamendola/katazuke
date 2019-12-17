@@ -36,10 +36,14 @@ Developed during Global Game Jam 2019.
 - [ ] Add characters to end of input screen
 - [x] Add tecelation to open clothes
 - [ ] Smooth transition between scenes
+- [ ] Fix character height to match with table
 - [ ] Rework title screen's UI
 - [ ] Create tutorial
+- [ ] Solve cloth flickering when walking
+- [ ] Add loading trigger in input screen end
 
 --
 
+- [ ] Loading Screen before game starts
 - [ ] Create stage selection screen
 - [ ] Create more stages
