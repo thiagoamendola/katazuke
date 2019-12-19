@@ -31,11 +31,11 @@ Developed during Global Game Jam 2019.
 - [x] Remove previous balloons
 - [x] Add feedback when player can interact with interaction spot
 - [x] Add M button to Arrow keys asset and so on
-- [ ] Improve joyless particle
-- [ ] Improve winning screen UI
+- [x] Improve joyless particle
+- [x] Smooth transition between scenes
 - [ ] Add characters to end of input screen
+- [ ] Improve winning screen UI
 - [x] Add tecelation to open clothes
-- [ ] Smooth transition between scenes
 - [ ] Fix character height to match with table
 - [ ] Rework title screen's UI
 - [ ] Create tutorial
