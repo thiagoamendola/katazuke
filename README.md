@@ -33,13 +33,14 @@ Developed during Global Game Jam 2019.
 - [x] Add M button to Arrow keys asset and so on
 - [x] Improve joyless particle
 - [x] Smooth transition between scenes
-- [ ] Add characters to end of input screen
+- [x] Add characters to end of input screen
+- [ ] Check ESC behaviour during input screen
 - [ ] Improve winning screen UI
 - [x] Add tecelation to open clothes
 - [x] Fix character height to match with table
 - [ ] Rework title screen's UI
 - [ ] Create tutorial
-- [ ] Solve cloth flickering when walking
+- [ ] Solve cloth flickering when walking (STILL HAPPEN?)
 - [ ] Add loading trigger in input screen end
 
 --

@@ -66,24 +66,18 @@ public class ScreenManager : MonoBehaviour{
 		Scene oldScene = SceneManager.GetActiveScene();
 		GenericScreen oldScreen = activeScreen;
 		// Load new scene and set as active.
-		Debug.Log("CHANGING SCENES");
-		Debug.Log("[LALALA]"+loadSceneParameters);
-        Debug.Log("[LALALA]"+oldScene.name);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(screenName, loadSceneParameters);
 		yield return asyncLoad;
 		Scene loadedScene = SceneManager.GetSceneByName(screenName);
-		Debug.Log("[LALALA]"+loadedScene.name);
 		SceneManager.SetActiveScene(loadedScene);
 		// Get and open new screen
 		activeScreen = loadedScene.GetRootGameObjects().Where(obj => obj.GetComponent<GenericScreen>() != null).Cast<GameObject>().First().GetComponent<GenericScreen>();
-		// Debug.Log("[LALALA]"+loadedScene.GetRootGameObjects()[0].name);
-		Debug.Log("[LALALA]"+activeScreen.name);
 		activeScreen.Open();
 		// Close old screen.
 		if (oldScreen != null)
 		    oldScreen.Close();
         // Wait and unload old scene.
-        yield return new WaitForSeconds(GenericScreen.transitionDuration);
+        yield return new WaitForSeconds(GenericScreen.TRANSITIONDURATION);
         if(oldScene != null)
 			print(oldScene.name);
             SceneManager.UnloadSceneAsync(oldScene);

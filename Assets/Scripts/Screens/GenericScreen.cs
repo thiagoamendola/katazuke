@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class GenericScreen : MonoBehaviour{
 
-    public const float transitionDuration = 1.75f;
+    public const float TRANSITIONDURATION = 1.75f;
 
     [Header("Generic Screen")]
     public Camera camera;
@@ -24,10 +24,10 @@ public abstract class GenericScreen : MonoBehaviour{
         if (camera != cameraToUse){
             camera.gameObject.SetActive(false);
         }
-        return StartCoroutine(AsyncFocusCamera(cameraToUse, targetTransform));
+        return StartCoroutine(AsyncFocusCamera(cameraToUse, targetTransform, TRANSITIONDURATION));
     }
 
-    IEnumerator AsyncFocusCamera(Camera cameraToUse, Transform targetTransform){
+    public IEnumerator AsyncFocusCamera(Camera cameraToUse, Transform targetTransform, float duration){
         float progress = 0;
         Vector3 initialPosition = cameraToUse.transform.position;
         Quaternion initialRotation = cameraToUse.transform.rotation;
@@ -36,7 +36,7 @@ public abstract class GenericScreen : MonoBehaviour{
                 targetTransform.position, ApplyEasing(progress));
             cameraToUse.transform.rotation = Quaternion.Lerp(initialRotation,
                 targetTransform.rotation, ApplyEasing(progress));
-            progress = Mathf.Min(progress + Time.deltaTime/transitionDuration, 1.0f);
+            progress = Mathf.Min(progress + Time.deltaTime/duration, 1.0f);
             yield return null;
         }
     }

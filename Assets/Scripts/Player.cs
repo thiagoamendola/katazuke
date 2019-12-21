@@ -45,10 +45,6 @@ public class Player : MonoBehaviour {
         clothesQuantity = totalClothesQuantity;
         controlInput = (ControlInput?) InputManager.GetControlInput(playerNumber);
 		mistakeThought = transform.Find("ThoughtsHolder").Find("Mistake").gameObject.GetComponent<ThoughtBalloon>();
-		print("WOW");
-		print(transform.name);
-		print(GameObject.Find("Room").name);
-		print(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.name);
 		previousNextSpots = new List<ClothesPile>(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.GetComponentsInChildren<ClothesPile>().Where(r => r.playerNumber == playerNumber)).Cast<InteractionSpot>().ToList();
 	}
 

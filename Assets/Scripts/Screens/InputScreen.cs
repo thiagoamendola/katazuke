@@ -13,9 +13,13 @@ public class InputScreen : GenericScreen {
 	}
 
     [Header("Input Screen")]
+
 	public List<Animator> wardrobeList;
 	public List<InputSampler> inputSamplerList;
 	public List<TextMeshProUGUI> controlLabels;
+	public List<GameObject> characterList;
+
+	public Transform loadingCameraRef;
 
 	InputStep inputStep;
 
@@ -43,7 +47,7 @@ public class InputScreen : GenericScreen {
 			wardrobeList[(int)playerNumber].ResetTrigger("Open");
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
 		}
-		yield return new WaitForSeconds(transitionDuration + 0f);
+		yield return new WaitForSeconds(TRANSITIONDURATION + 0f);
 		foreach (PlayerNumber playerNumber in playerList){
 			Debug.Log("Choosing "+playerNumber.ToString());
 			bool successfulAssignment = false;
@@ -68,11 +72,18 @@ public class InputScreen : GenericScreen {
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
 			inputSamplerList[(int)playerNumber].SelectInput(detectedTypeIndex);
 		}
-		Debug.Log("FIN");
 		// Add countdown
-		yield return new WaitForSeconds(2f);
-		// Disappear with HUD
+		yield return new WaitForSeconds(0.05f);
 		// Maybe improve here: only go to next scene when interaction input is pressed.
+		// Start pre loading animation
+        StartCoroutine(AsyncFocusCamera(ScreenManager.activeCamera, loadingCameraRef, 0.75f));
+		foreach(GameObject character in characterList){
+			character.SetActive(true);
+			character.transform.Find("Character").GetComponent<Animator>().SetTrigger("angry");
+			character.GetComponent<Animator>().SetTrigger("engage");
+		}
+		yield return new WaitForSeconds(2.25f);
+		//
 		inputStep = InputStep.AssignComplete;
 		processControlFlow = null;
 		ScreenManager.GoToGameScreen();
@@ -94,4 +105,6 @@ public class InputScreen : GenericScreen {
 		InputManager.Reset();
 		InitiateScreen();
 	}
+
+
 }
