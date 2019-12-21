@@ -39,9 +39,11 @@ Developed during Global Game Jam 2019.
 - [x] Add tecelation to open clothes
 - [x] Fix character height to match with table
 - [ ] Rework title screen's UI
+- [ ] Add controller support to title screen
 - [ ] Create tutorial
 - [ ] Solve cloth flickering when walking (STILL HAPPEN?)
 - [ ] Add loading trigger in input screen end
+- [ ] Fix lighting
 
 --
 

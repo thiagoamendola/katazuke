@@ -27,6 +27,8 @@ public class InputScreen : GenericScreen {
 
 	IEnumerator processControlFlow = null;
 
+	bool started = false;
+	bool resetable = true;
 
     public override void Open(){
         FocusCamera();
@@ -45,15 +47,19 @@ public class InputScreen : GenericScreen {
 		// Close all wardrobes
 		foreach (PlayerNumber playerNumber in playerList){
 			wardrobeList[(int)playerNumber].ResetTrigger("Open");
-			wardrobeList[(int)playerNumber].SetTrigger("Close");
 		}
-		yield return new WaitForSeconds(TRANSITIONDURATION + 0f);
+		if(!started)
+			yield return new WaitForSeconds(TRANSITIONDURATION);
+		started = true;
+		resetable = true;
 		foreach (PlayerNumber playerNumber in playerList){
 			Debug.Log("Choosing "+playerNumber.ToString());
 			bool successfulAssignment = false;
 			int detectedTypeIndex = 0;
 			while(!successfulAssignment){
 				// Open player's wardrobe
+				wardrobeList[(int)playerNumber].ResetTrigger("Close");
+				wardrobeList[(int)playerNumber].ResetTrigger("Open");
 				wardrobeList[(int)playerNumber].SetTrigger("Open");
 				// Wait for input
 				yield return new WaitUntil(() => Input.anyKeyDown);
@@ -73,8 +79,9 @@ public class InputScreen : GenericScreen {
 			inputSamplerList[(int)playerNumber].SelectInput(detectedTypeIndex);
 		}
 		// Add countdown
-		yield return new WaitForSeconds(0.05f);
 		// Maybe improve here: only go to next scene when interaction input is pressed.
+		yield return new WaitForSeconds(1.5f);
+		resetable = false;
 		// Start pre loading animation
         StartCoroutine(AsyncFocusCamera(ScreenManager.activeCamera, loadingCameraRef, 0.75f));
 		foreach(GameObject character in characterList){
@@ -90,10 +97,9 @@ public class InputScreen : GenericScreen {
     }
 
 	void InitiateScreen(){
-		Debug.Log("Clear player 1 UI");
-		Debug.Log("Clear player 2 UI");
 		inputStep = InputStep.AssigningInput;
 		playerNumber = PlayerNumber.Player1;
+		resetable = false;
 		if (processControlFlow != null)
 			StopCoroutine(processControlFlow);
 		processControlFlow = ProcessControlAssignment();
@@ -102,9 +108,27 @@ public class InputScreen : GenericScreen {
 
 	public void Reset(){
 		Debug.Log("Reset");
+		resetable = false;
+		var playerList = Enum.GetValues(typeof(PlayerNumber)).Cast<PlayerNumber>();
+		foreach (PlayerNumber playerNumber in playerList){
+			print((int)playerNumber);
+			if((int)playerNumber != 0){
+				print("ENTER");
+				wardrobeList[(int)playerNumber].ResetTrigger("Close");
+				wardrobeList[(int)playerNumber].SetTrigger("Close");
+			}
+			inputSamplerList[(int)playerNumber].ResetInput();
+		}
 		InputManager.Reset();
 		InitiateScreen();
 	}
+
+	void Update() {
+		if(resetable && Input.GetKeyDown(KeyCode.Escape)){
+			Reset();
+		}
+	}
+
 
 
 }

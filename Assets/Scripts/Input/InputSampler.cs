@@ -12,7 +12,18 @@ public class InputSampler : MonoBehaviour
         foreach(Animator selectedInputIcon in selectedInputIcons){
             selectedInputIcon.gameObject.GetComponent<CanvasGroup>().alpha = 0;
         }
+        selectedInputIcons[index].gameObject.SetActive(true);
         selectedInputIcons[index].SetTrigger("SelectedInput");
+    }
+
+    public void ResetInput(){
+        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        print(name);
+        foreach(Animator selectedInputIcon in selectedInputIcons){
+            selectedInputIcon.gameObject.SetActive(false);
+            selectedInputIcon.ResetTrigger("SelectedInput");
+            selectedInputIcon.gameObject.GetComponent<CanvasGroup>().alpha = 0; //<--
+        }
     }
 
 }
