@@ -34,7 +34,10 @@ Developed during Global Game Jam 2019.
 - [x] Improve joyless particle
 - [x] Smooth transition between scenes
 - [x] Add characters to end of input screen
-- [ ] Check ESC behaviour during input screen
+- [x] Check ESC behaviour during input screen
+- [x] Add interscenes music controller
+- [ ] Add ESC to go back to title screen
+- [ ] Add ESC label
 - [ ] Improve winning screen UI
 - [x] Add tecelation to open clothes
 - [x] Fix character height to match with table
