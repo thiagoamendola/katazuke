@@ -16,9 +16,8 @@ public class InputScreen : GenericScreen {
 
 	public List<Animator> wardrobeList;
 	public List<InputSampler> inputSamplerList;
-	public List<TextMeshProUGUI> controlLabels;
 	public List<GameObject> characterList;
-
+	public TextMeshProUGUI escText;
 	public Transform loadingCameraRef;
 
 	InputStep inputStep;
@@ -48,26 +47,29 @@ public class InputScreen : GenericScreen {
 		foreach (PlayerNumber playerNumber in playerList){
 			wardrobeList[(int)playerNumber].ResetTrigger("Open");
 		}
-		if(!started)
+		if(!started){
+			escText.gameObject.transform.parent.GetComponent<CanvasGroup>().alpha = 0;
 			yield return new WaitForSeconds(TRANSITIONDURATION);
+			escText.gameObject.transform.parent.GetComponent<CanvasGroup>().alpha = 1;
+		}
 		started = true;
 		resetable = true;
 		foreach (PlayerNumber playerNumber in playerList){
-			Debug.Log("Choosing "+playerNumber.ToString());
 			bool successfulAssignment = false;
 			int detectedTypeIndex = 0;
+			this.playerNumber = playerNumber;
+			// Open player's wardrobe.
+			wardrobeList[(int)playerNumber].ResetTrigger("Close");
+			wardrobeList[(int)playerNumber].ResetTrigger("Open");
+			wardrobeList[(int)playerNumber].SetTrigger("Open");
+			// Wait for input assignment.
 			while(!successfulAssignment){
-				// Open player's wardrobe
-				wardrobeList[(int)playerNumber].ResetTrigger("Close");
-				wardrobeList[(int)playerNumber].ResetTrigger("Open");
-				wardrobeList[(int)playerNumber].SetTrigger("Open");
 				// Wait for input
 				yield return new WaitUntil(() => Input.anyKeyDown);
 				// Check if input corresponds to any input type
 				ControlInput? detectedType = InputManager.DetectControlInput();
 				if (detectedType != null){
 					// Assign detected input for the player
-					controlLabels[(int)playerNumber].text = detectedType.ToString();
 					InputManager.SetPlayer(playerNumber, (ControlInput)detectedType);
 					detectedTypeIndex = (int)(ControlInput)detectedType;
 					successfulAssignment = true;
@@ -77,11 +79,14 @@ public class InputScreen : GenericScreen {
 			wardrobeList[(int)playerNumber].ResetTrigger("Open");
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
 			inputSamplerList[(int)playerNumber].SelectInput(detectedTypeIndex);
+			//
+			escText.text = "to Restart";
 		}
-		// Add countdown
+		// Add countdown <--
 		// Maybe improve here: only go to next scene when interaction input is pressed.
 		yield return new WaitForSeconds(1.5f);
 		resetable = false;
+		escText.gameObject.transform.parent.GetComponent<CanvasGroup>().alpha = 0;
 		// Start pre loading animation
         StartCoroutine(AsyncFocusCamera(ScreenManager.activeCamera, loadingCameraRef, 0.75f));
 		foreach(GameObject character in characterList){
@@ -90,7 +95,7 @@ public class InputScreen : GenericScreen {
 			character.GetComponent<Animator>().SetTrigger("engage");
 		}
 		yield return new WaitForSeconds(2.25f);
-		//
+		// Go to game screen.
 		inputStep = InputStep.AssignComplete;
 		processControlFlow = null;
 		ScreenManager.GoToGameScreen();
@@ -99,6 +104,7 @@ public class InputScreen : GenericScreen {
 	void InitiateScreen(){
 		inputStep = InputStep.AssigningInput;
 		playerNumber = PlayerNumber.Player1;
+		escText.text = "to Exit";
 		resetable = false;
 		if (processControlFlow != null)
 			StopCoroutine(processControlFlow);
@@ -107,13 +113,13 @@ public class InputScreen : GenericScreen {
 	}
 
 	public void Reset(){
-		Debug.Log("Reset");
+		inputStep = InputStep.AssigningInput;
+		playerNumber = PlayerNumber.Player1;
 		resetable = false;
+		escText.text = "to Exit";
 		var playerList = Enum.GetValues(typeof(PlayerNumber)).Cast<PlayerNumber>();
 		foreach (PlayerNumber playerNumber in playerList){
-			print((int)playerNumber);
 			if((int)playerNumber != 0){
-				print("ENTER");
 				wardrobeList[(int)playerNumber].ResetTrigger("Close");
 				wardrobeList[(int)playerNumber].SetTrigger("Close");
 			}
@@ -125,7 +131,17 @@ public class InputScreen : GenericScreen {
 
 	void Update() {
 		if(resetable && Input.GetKeyDown(KeyCode.Escape)){
-			Reset();
+			if (playerNumber == PlayerNumber.Player1){
+				print("VAI");
+				wardrobeList[(int)PlayerNumber.Player1].ResetTrigger("Open");
+				wardrobeList[(int)PlayerNumber.Player1].ResetTrigger("Close");
+				wardrobeList[(int)PlayerNumber.Player1].SetTrigger("Close");
+				print("FOI");
+				resetable = false;
+				ScreenManager.GoToTitleScreen();
+			}else{
+				Reset();
+			}
 		}
 	}
 
