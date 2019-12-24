@@ -36,13 +36,13 @@ Developed during Global Game Jam 2019.
 - [x] Add characters to end of input screen
 - [x] Check ESC behaviour during input screen
 - [x] Add interscenes music controller
-- [ ] Add ESC to go back to title screen
-- [ ] Add ESC label
+- [x] Add ESC to go back to title screen
+- [x] Add ESC label
+- [x] Add controller support to title screen
 - [ ] Improve winning screen UI
 - [x] Add tecelation to open clothes
 - [x] Fix character height to match with table
 - [ ] Rework title screen's UI
-- [ ] Add controller support to title screen
 - [ ] Create tutorial
 - [ ] Solve cloth flickering when walking (STILL HAPPEN?)
 - [ ] Add loading trigger in input screen end

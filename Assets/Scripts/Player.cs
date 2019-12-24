@@ -61,8 +61,6 @@ public class Player : MonoBehaviour {
 					}
 				List<InteractionSpot> nextSpots = currentInteractionSpot.GetHintableNextSpots();
 				foreach(InteractionSpot spot in nextSpots){
-					print(spot.name);
-					print(spot.hint.name);
 					spot.hint.Show();
 				}
 				previousNextSpots = nextSpots;
