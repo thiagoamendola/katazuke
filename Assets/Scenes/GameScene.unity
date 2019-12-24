@@ -904,6 +904,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1966061574}
+  characterFocusDistance: {x: -4.99, y: 5.12, z: 0}
+  characterFocusSpeed: 2
+  waitBeforeTitleScreen: 5
 --- !u!1 &510080127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,8 +2385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 97.2}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchoredPosition: {x: 0, y: -233}
+  m_SizeDelta: {x: 657.4, y: 133.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1204519664
 AudioSource:
@@ -2508,8 +2511,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293059298
+  m_fontColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2527,14 +2530,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_textAlignment: 258
+  m_fontStyle: 1
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -3593,7 +3596,7 @@ Transform:
   m_GameObject: {fileID: 1966061572}
   m_LocalRotation: {x: 0.24184471, y: 0.66446304, z: -0.24184471, w: 0.66446304}
   m_LocalPosition: {x: 42, y: 6, z: -50}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000012, y: 1.0000002, z: 1.0000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -4137,6 +4140,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -9.6861186e-11
       objectReference: {fileID: 0}
+    - target: {fileID: 1333746584877449012, guid: 50fb25b6c510d054fa0fd06b1d03350b,
+        type: 3}
+      propertyPath: totalClothesQuantity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50fb25b6c510d054fa0fd06b1d03350b, type: 3}
 --- !u!1001 &1795978004640723151
@@ -4619,6 +4627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.99965984
+      objectReference: {fileID: 0}
+    - target: {fileID: 3164528147787894640, guid: 71c42b73abcf0ed4eac67bd6a73cf472,
+        type: 3}
+      propertyPath: totalClothesQuantity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}

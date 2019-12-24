@@ -17,9 +17,7 @@ public class ClothDisposer : InteractionSpot {
             if (player.holdingObject != null && player.holdingObject.name == "FoldedCloth" && 
                 requiresJoy == player.holdingObject.GetComponent<ClothInfo>().joy){
                 // Trigger animation
-                //if(requiresJoy){
                 GetComponentsInChildren<Animator>()[1].SetTrigger("OpenClose");
-                //}
                 // Fold cloth.
                 Destroy(player.holdingObject);
                 GameObject.Find("Music"+player.playerNumber.ToString()).GetComponent<AudioSource>().volume = 0.1f + (float)(player.totalClothesQuantity-player.clothesQuantity)/(float)player.totalClothesQuantity;
@@ -34,28 +32,12 @@ public class ClothDisposer : InteractionSpot {
                 StartCoroutine(HaltForAnimation(player, DISCARDTIME));
                 return true;
             }else if(!requiresJoy && player.holdingObject == null && player.clothesQuantity <= 0){
-                // Ending the game.
-                foreach(ParticleSystem ps in GameObject.FindObjectsOfType<ParticleSystem>())
-                    ps.Stop();
-                // Animate winner and loser players.
-                foreach(Player p in GameObject.FindObjectsOfType<Player>()){
-                    p.controlEnabled = false;
-                    if(p != player)
-                        p.animator.SetTrigger("angry");
-                }
-                player.animator.SetTrigger("praise");
-                GameObject.Find("WinMessage").GetComponent<TextMeshProUGUI>().text = player.playerNumber.ToString()+" Wins";
-                GameObject.Find("WinMessage").GetComponent<AudioSource>().Play();
-                StartCoroutine(ReturnToTitle());
+                // End the game.
+                ((GameScreen)ScreenManager.activeScreen).EndGame(player);
                 return true;
             }
         }
         return false;
-    }
-
-    IEnumerator ReturnToTitle(){
-        yield return new WaitForSeconds(5f);
-        ScreenManager.GoToTitleScreen();
     }
 
     public override List<InteractionSpot> GetHintableNextSpots(){
