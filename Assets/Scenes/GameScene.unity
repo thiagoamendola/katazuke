@@ -4143,7 +4143,7 @@ PrefabInstance:
     - target: {fileID: 1333746584877449012, guid: 50fb25b6c510d054fa0fd06b1d03350b,
         type: 3}
       propertyPath: totalClothesQuantity
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50fb25b6c510d054fa0fd06b1d03350b, type: 3}
@@ -4631,7 +4631,7 @@ PrefabInstance:
     - target: {fileID: 3164528147787894640, guid: 71c42b73abcf0ed4eac67bd6a73cf472,
         type: 3}
       propertyPath: totalClothesQuantity
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}

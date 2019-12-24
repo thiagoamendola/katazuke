@@ -39,7 +39,7 @@ Developed during Global Game Jam 2019.
 - [x] Add ESC to go back to title screen
 - [x] Add ESC label
 - [x] Add controller support to title screen
-- [ ] Improve winning screen UI
+- [x] Improve winning screen UI
 - [x] Add tecelation to open clothes
 - [x] Fix character height to match with table
 - [ ] Rework title screen's UI
