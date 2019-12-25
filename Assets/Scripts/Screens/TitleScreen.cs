@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : GenericScreen {
 
+    public GameObject loadingScreen;
+
     [Header("UI")]
     public GameObject uiCanvas;
 
@@ -20,6 +22,17 @@ public class TitleScreen : GenericScreen {
 
     public override void Close(){
 
+    }
+
+    protected override void Start(){
+        base.Start();
+        StartCoroutine(StartAsync());
+    }
+
+    IEnumerator StartAsync(){
+        loadingScreen.SetActive(true);
+        yield return new WaitUntil(() => SceneManager.GetSceneByName("MainScenario").isLoaded);
+        loadingScreen.SetActive(false);
     }
 
     public void ButtonPlay() {

@@ -42,14 +42,13 @@ Developed during Global Game Jam 2019.
 - [x] Improve winning screen UI
 - [x] Add tecelation to open clothes
 - [x] Fix character height to match with table
-- [ ] Rework title screen's UI
+- [x] Add loading trigger in input screen end
 - [ ] Create tutorial
 - [ ] Solve cloth flickering when walking (STILL HAPPEN?)
-- [ ] Add loading trigger in input screen end
 - [ ] Fix lighting
+- [ ] Improve launcher banner
 
 --
 
-- [ ] Loading Screen before game starts
 - [ ] Create stage selection screen
 - [ ] Create more stages

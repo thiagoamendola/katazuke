@@ -9,7 +9,7 @@ public abstract class GenericScreen : MonoBehaviour{
     [Header("Generic Screen")]
     public Camera camera;
 
-    void Start(){
+    protected virtual void Start(){
         ScreenManager.Create();
     }
 
