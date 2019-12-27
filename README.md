@@ -47,6 +47,7 @@ Developed during Global Game Jam 2019.
 - [ ] Create generic tweener
     - Tween esc text in game screen
     - Tween esc text in input screen
+- [ ] Create exit button
 - [ ] Create tutorial
 - [ ] Solve cloth flickering when walking (STILL HAPPEN?)
 - [ ] Rebake lighting for all scenes

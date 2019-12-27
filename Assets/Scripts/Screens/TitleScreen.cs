@@ -30,9 +30,11 @@ public class TitleScreen : GenericScreen {
     }
 
     IEnumerator StartAsync(){
-        loadingScreen.SetActive(true);
-        yield return new WaitUntil(() => SceneManager.GetSceneByName("MainScenario").isLoaded);
-        loadingScreen.SetActive(false);
+        if (!SceneManager.GetSceneByName("MainScenario").isLoaded){
+            loadingScreen.SetActive(true);
+            yield return new WaitUntil(() => SceneManager.GetSceneByName("MainScenario").isLoaded);
+            loadingScreen.SetActive(false);
+        }
     }
 
     public void ButtonPlay() {

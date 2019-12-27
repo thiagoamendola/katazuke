@@ -62,6 +62,7 @@ public class GameScreen : GenericScreen {
                 escMessage.SetActive(true);
                 StartCoroutine(WaitBeforeResetExit());
             }else{
+                escMessage.SetActive(false);
                 ScreenManager.GoToTitleScreen();
             }
         }
