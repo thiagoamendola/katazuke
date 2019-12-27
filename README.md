@@ -43,9 +43,13 @@ Developed during Global Game Jam 2019.
 - [x] Add tecelation to open clothes
 - [x] Fix character height to match with table
 - [x] Add loading trigger in input screen end
+- [x] Fix lighting
+- [ ] Create generic tweener
+    - Tween esc text in game screen
+    - Tween esc text in input screen
 - [ ] Create tutorial
 - [ ] Solve cloth flickering when walking (STILL HAPPEN?)
-- [ ] Fix lighting
+- [ ] Rebake lighting for all scenes
 - [ ] Improve launcher banner
 
 --

@@ -132,11 +132,9 @@ public class InputScreen : GenericScreen {
 	void Update() {
 		if(resetable && Input.GetKeyDown(KeyCode.Escape)){
 			if (playerNumber == PlayerNumber.Player1){
-				print("VAI");
 				wardrobeList[(int)PlayerNumber.Player1].ResetTrigger("Open");
 				wardrobeList[(int)PlayerNumber.Player1].ResetTrigger("Close");
 				wardrobeList[(int)PlayerNumber.Player1].SetTrigger("Close");
-				print("FOI");
 				resetable = false;
 				ScreenManager.GoToTitleScreen();
 			}else{

@@ -10,6 +10,9 @@ public class GameScreen : GenericScreen {
 
     public float waitBeforeTitleScreen = 5.0f;
 
+    public GameObject escMessage;
+    bool checkingForReset = false;
+
     public override void Open() {
         FocusCamera();
     }
@@ -52,5 +55,22 @@ public class GameScreen : GenericScreen {
         StartCoroutine(AsyncFocusCamera(ScreenManager.activeCamera, refObj.transform, characterFocusSpeed));
     }
 
+	void Update() {
+		if(Input.GetKeyDown(KeyCode.Escape)){
+            if (!checkingForReset){
+                checkingForReset = true;
+                escMessage.SetActive(true);
+                StartCoroutine(WaitBeforeResetExit());
+            }else{
+                ScreenManager.GoToTitleScreen();
+            }
+        }
+    }
+
+    IEnumerator WaitBeforeResetExit(){
+        yield return new WaitForSeconds(2f);
+        checkingForReset = false;
+        escMessage.SetActive(false);
+    }
 
 }
