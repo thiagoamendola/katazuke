@@ -54,4 +54,11 @@ public class TitleScreen : GenericScreen {
 
         }
     }
+
+
+	public void ButtonExit(){
+		Application.Quit();
+	}
+
+
 }

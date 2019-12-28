@@ -44,13 +44,13 @@ Developed during Global Game Jam 2019.
 - [x] Fix character height to match with table
 - [x] Add loading trigger in input screen end
 - [x] Fix lighting
+- [x] Create exit button
 - [ ] Create generic tweener
     - Tween esc text in game screen
     - Tween esc text in input screen
-- [ ] Create exit button
+- [ ] Rebake lighting for all scenes
 - [ ] Create tutorial
 - [ ] Solve cloth flickering when walking (STILL HAPPEN?)
-- [ ] Rebake lighting for all scenes
 - [ ] Improve launcher banner
 
 --
