@@ -5,11 +5,20 @@ using UnityEngine;
 public class TutorialAnimator : MonoBehaviour
 {
 
+    [HideInInspector]
+    public Animator animator;
+
     public GameObject playerCharacter;
     public GameObject wardrobe;
     public GameObject discardBox;
     
     string lastPlayerAnim;
+
+
+    void Awake(){
+        animator = GetComponent<Animator>();
+        lastPlayerAnim = "";
+    }
 
     public void TriggerPlayerAnimation(string animName){
         Animator playerAnimator = playerCharacter.GetComponent<Animator>();

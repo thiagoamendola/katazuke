@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db9ea7e98f6d3a48988119ac5eabf9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   playerCharacter: {fileID: 1022319494}
   wardrobe: {fileID: 1795925976}
   discardBox: {fileID: 2130513971}
@@ -632,18 +633,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 800975473}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &800975475 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 711613684836918567, guid: f2e79976fbfd1314ebd36d63f0ede092,
-    type: 3}
-  m_PrefabInstance: {fileID: 800975473}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4204d5c1d269244ad0f8e5785ac935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &802577153 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4211622186507864290, guid: f2e79976fbfd1314ebd36d63f0ede092,
@@ -827,21 +816,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 905008066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4daa9f3a35a89045a988763a0ccddca, type: 3}
+  m_Script: {fileID: 11500000, guid: 98868f1ee737eab4e8a27ad6503b3a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1534138789}
-  wardrobeList:
-  - {fileID: 0}
-  - {fileID: 0}
-  inputSamplerList:
-  - {fileID: 4211622187215541220}
-  - {fileID: 800975475}
-  characterList:
-  - {fileID: 0}
-  - {fileID: 0}
-  escText: {fileID: 1056596850}
-  loadingCameraRef: {fileID: 0}
+  tutorialAnimator: {fileID: 415123264}
+  animationNameList:
+  - ending
+  - grabcloth
+  - foldcloth
+  - happycloth
+  - sadcloth
+  - ending
+  - ending
+  tutorialTextList:
+  - Move and interact with different objects to tidy up your clothes.
+  - Firstly, grab a cloth from the pile on top of the bed.
+  - Go to the folding table to fold the cloth.
+  - If it sparks happiness, put it to the wardrobe.
+  - If it doesn't manifest joy, put it in the discard box.
+  - After tidying all clothes, go to the discard box to thanks the clothes to be disposed.
+  - The first person to tidy all their clothes wins!
 --- !u!4 &905008068
 Transform:
   m_ObjectHideFlags: 0
@@ -1083,6 +1077,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3164528147787894640, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}
     - {fileID: 3079562774192206138, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}
+    - {fileID: 4491930310051513636, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}
 --- !u!4 &1022319493 stripped
 Transform:
@@ -2838,15 +2833,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e79976fbfd1314ebd36d63f0ede092, type: 3}
---- !u!114 &4211622187215541220 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 711613684836918567, guid: f2e79976fbfd1314ebd36d63f0ede092,
-    type: 3}
-  m_PrefabInstance: {fileID: 4211622187215541219}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4204d5c1d269244ad0f8e5785ac935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
