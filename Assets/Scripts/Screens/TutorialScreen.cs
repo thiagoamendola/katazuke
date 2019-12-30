@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TutorialScreen : MonoBehaviour
+public class TutorialScreen : GenericScreen
 {
 
+    [Header("Tutorial Screen")]
+    public GameObject globalCanvas;
     public TutorialAnimator tutorialAnimator;
-
     public TextMeshProUGUI tutorialText;
 
     [Header("Tutorial Steps")]
@@ -19,14 +20,26 @@ public class TutorialScreen : MonoBehaviour
 
     int stepIndex;
 
+    public override void Open(){
+        globalCanvas.SetActive(false);
+        FocusCamera();
+        StartCoroutine(OpenAsync());
+    }
 
-    void Start(){
+    IEnumerator OpenAsync(){
+        yield return new WaitForSeconds(TRANSITIONDURATION);
         stepIndex = -1;
         GoToStep(0);
+        globalCanvas.SetActive(true);
+    }
+
+    public override void Close(){
+
     }
 
     void Update() {
 		if(Input.GetKeyDown(KeyCode.Escape)){
+            globalCanvas.SetActive(false);
             ScreenManager.GoToTitleScreen();
 		} else if (Input.GetButtonDown("ActionCtrl1") || Input.GetButtonDown("ActionCtrl1") || 
             Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)){
@@ -36,6 +49,7 @@ public class TutorialScreen : MonoBehaviour
 
     void GoToStep(int newStepIndex){
         if(animationNameList.Count <= newStepIndex){
+            globalCanvas.SetActive(false);
             ScreenManager.GoToTitleScreen();
             return;
         }

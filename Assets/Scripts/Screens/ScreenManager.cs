@@ -103,6 +103,10 @@ public class ScreenManager : MonoBehaviour{
 		Instance.StartCoroutine(Instance.GoToScreen("GameScene"));
 	}
 
+	public static void GoToTutorialScreen(){
+		Instance.StartCoroutine(Instance.GoToScreen("TutorialScene"));
+	}
+
 
 	#endregion
 

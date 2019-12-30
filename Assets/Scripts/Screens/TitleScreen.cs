@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : GenericScreen {
 
+    [Header("Loading Screen")]
     public GameObject loadingScreen;
 
     [Header("UI")]
@@ -42,6 +43,13 @@ public class TitleScreen : GenericScreen {
         uiCanvas.SetActive(false);
         // Call Input Screen
         ScreenManager.GoToInputScreen();
+    }
+
+    public void ButtonTutorial() {
+        // Disable UI
+        uiCanvas.SetActive(false);
+        // Call Input Screen
+        ScreenManager.GoToTutorialScreen();
     }
 
     public void ButtonCredits() {
