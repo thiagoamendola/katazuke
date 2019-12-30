@@ -8,11 +8,13 @@ ModelImporter:
     100004: Janela
     100006: //RootNode
     100008: Vidro_janela
+    100010: Vidro janela
     400000: Backwall
     400002: Floor
     400004: Janela
     400006: //RootNode
     400008: Vidro_janela
+    400010: Vidro janela
     2100000: Wall1
     2100002: Rodape
     2100004: Rodapebaixo
@@ -24,14 +26,17 @@ ModelImporter:
     2300002: Floor
     2300004: Janela
     2300006: Vidro_janela
+    2300008: Vidro janela
     3300000: Backwall
     3300002: Floor
     3300004: Janela
     3300006: Vidro_janela
+    3300008: Vidro janela
     4300000: Backwall
     4300002: Floor
     4300004: Janela
     4300006: Vidro_janela
+    4300008: Vidro janela
     7400000: Default Take
     9500000: //RootNode
   externalObjects:

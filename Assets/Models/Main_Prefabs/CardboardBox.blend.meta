@@ -8,11 +8,17 @@ ModelImporter:
     100004: Plane_001
     100006: Plane_002
     100008: Plane_003
+    100010: Plane.001
+    100012: Plane.002
+    100014: Plane.003
     400000: //RootNode
     400002: Plane
     400004: Plane_001
     400006: Plane_002
     400008: Plane_003
+    400010: Plane.001
+    400012: Plane.002
+    400014: Plane.003
     2100000: Cardboard_Box
     2100002: Cardboard_flip
     2300000: //RootNode
@@ -20,16 +26,26 @@ ModelImporter:
     2300004: Plane_001
     2300006: Plane_002
     2300008: Plane_003
+    2300010: Plane.001
+    2300012: Plane.002
+    2300014: Plane.003
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
     3300006: Plane_002
     3300008: Plane_003
+    3300010: Plane.001
+    3300012: Plane.002
+    3300014: Plane.003
     4300000: Carboard_box
     4300002: Plane
     4300004: Plane_001
     4300006: Plane_002
     4300008: Plane_003
+    4300010: Carboard box
+    4300012: Plane.001
+    4300014: Plane.002
+    4300016: Plane.003
     7400000: Default Take
     9500000: //RootNode
   externalObjects:

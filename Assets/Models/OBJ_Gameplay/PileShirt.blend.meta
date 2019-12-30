@@ -11,6 +11,12 @@ ModelImporter:
     100010: Shirt_004
     100012: Shirt_005
     100014: Shirt_007
+    100016: Shirt.001
+    100018: Shirt.002
+    100020: Shirt.003
+    100022: Shirt.004
+    100024: Shirt.005
+    100026: Shirt.007
     400000: //RootNode
     400002: Shirt
     400004: Shirt_001
@@ -19,6 +25,12 @@ ModelImporter:
     400010: Shirt_004
     400012: Shirt_005
     400014: Shirt_007
+    400016: Shirt.001
+    400018: Shirt.002
+    400020: Shirt.003
+    400022: Shirt.004
+    400024: Shirt.005
+    400026: Shirt.007
     2100000: Shirt1
     2100002: Shirt2
     2100004: Shirt8
@@ -33,6 +45,12 @@ ModelImporter:
     2300008: Shirt_004
     2300010: Shirt_005
     2300012: Shirt_007
+    2300014: Shirt.001
+    2300016: Shirt.002
+    2300018: Shirt.003
+    2300020: Shirt.004
+    2300022: Shirt.005
+    2300024: Shirt.007
     3300000: Shirt
     3300002: Shirt_001
     3300004: Shirt_002
@@ -40,6 +58,12 @@ ModelImporter:
     3300008: Shirt_004
     3300010: Shirt_005
     3300012: Shirt_007
+    3300014: Shirt.001
+    3300016: Shirt.002
+    3300018: Shirt.003
+    3300020: Shirt.004
+    3300022: Shirt.005
+    3300024: Shirt.007
     4300000: Shirt
     4300002: Shirt_001
     4300004: Shirt_002
@@ -47,6 +71,12 @@ ModelImporter:
     4300008: Shirt_004
     4300010: Shirt_005
     4300012: Shirt_007
+    4300014: Shirt.001
+    4300016: Shirt.002
+    4300018: Shirt.003
+    4300020: Shirt.004
+    4300022: Shirt.005
+    4300024: Shirt.007
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

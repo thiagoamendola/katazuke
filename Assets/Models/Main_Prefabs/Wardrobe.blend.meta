@@ -8,11 +8,13 @@ ModelImporter:
     100004: Plano
     100006: Porta
     100008: //RootNode
+    100010: Armario caixa
     400000: Armario_caixa
     400002: Caixas
     400004: Plano
     400006: Porta
     400008: //RootNode
+    400010: Armario caixa
     2100000: Wardrobe
     2100002: Wardrobe_box
     2100004: Material
@@ -23,16 +25,20 @@ ModelImporter:
     2300004: Plano
     2300006: Porta
     2300008: //RootNode
+    2300010: Armario caixa
     3300000: Armario_caixa
     3300002: Caixas
     3300004: Plano
     3300006: Porta
     3300008: //RootNode
+    3300010: Armario caixa
     4300000: Armario_001
     4300002: Armario_caixa
     4300004: Caixas
     4300006: Plano
     4300008: Porta
+    4300010: Armario.001
+    4300012: Armario caixa
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

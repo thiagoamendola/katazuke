@@ -1,44 +1,14 @@
 fileFormatVersion: 2
-guid: 82fd16d1a5dbc0c4db24c3094d70a030
+guid: 632cfd2716759d340b3a720d3c1a5f9d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Backwall
-    100002: Floor
-    100004: Janela
-    100006: //RootNode
-    100008: Vidro_janela
-    100010: Vidro janela
-    400000: Backwall
-    400002: Floor
-    400004: Janela
-    400006: //RootNode
-    400008: Vidro_janela
-    400010: Vidro janela
-    2100000: Wall1
-    2100002: Rodape
-    2100004: Rodapebaixo
-    2100006: Floor
-    2100008: board
-    2100010: janela
-    2100012: vidro
-    2300000: Backwall
-    2300002: Floor
-    2300004: Janela
-    2300006: Vidro_janela
-    2300008: Vidro janela
-    3300000: Backwall
-    3300002: Floor
-    3300004: Janela
-    3300006: Vidro_janela
-    3300008: Vidro janela
-    4300000: Backwall
-    4300002: Floor
-    4300004: Janela
-    4300006: Vidro_janela
-    4300008: Vidro janela
-    7400000: Default Take
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2100000: No Name
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Plane
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -92,7 +62,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -100,7 +70,7 @@ ModelImporter:
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 3
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -119,7 +89,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

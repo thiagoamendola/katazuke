@@ -9,19 +9,28 @@ ModelImporter:
     100006: Tronco
     100008: Vaso_grande
     100010: //RootNode
+    100012: Bone.001
+    100014: Bone.001_end
+    100016: Vaso grande
     400000: Bone
     400002: Bone_001
     400004: Folha
     400006: Tronco
     400008: Vaso_grande
     400010: //RootNode
+    400012: Bone.001
+    400014: Bone.001_end
+    400016: Vaso grande
     2100000: plant
     2100002: Material
     2100004: vaso1
     2300000: Vaso_grande
+    2300002: Vaso grande
     3300000: Vaso_grande
+    3300002: Vaso grande
     4300000: Folha
     4300002: Vaso_grande
+    4300004: Vaso grande
     7400000: Default Take
     7400002: SimpleWind
     9500000: //RootNode

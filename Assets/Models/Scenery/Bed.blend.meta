@@ -8,11 +8,13 @@ ModelImporter:
     100004: Colch_o
     100006: lencol
     100008: Travesseiro
+    100010: "Colch\xE3o"
     400000: //RootNode
     400002: Cama
     400004: Colch_o
     400006: lencol
     400008: Travesseiro
+    400010: "Colch\xE3o"
     2100000: Bed
     2100002: Colchao
     2100004: Lecol
@@ -21,16 +23,20 @@ ModelImporter:
     2300002: Colch_o
     2300004: lencol
     2300006: Travesseiro
+    2300008: "Colch\xE3o"
     3300000: Cama
     3300002: Colch_o
     3300004: lencol
     3300006: Travesseiro
+    3300008: "Colch\xE3o"
     4300000: Cama
     4300002: Colch_o
     4300004: lencol
     4300006: Travesseiro
+    4300008: "Colch\xE3o"
     7400000: Default Take
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material

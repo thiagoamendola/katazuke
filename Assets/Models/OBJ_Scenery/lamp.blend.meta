@@ -6,20 +6,30 @@ ModelImporter:
     100000: Abajur_p_
     100002: //RootNode
     100004: Abajur_Grande
+    100006: Abajur Grande
+    100008: "Abajur p\xE9"
     400000: Abajur_p_
     400002: //RootNode
     400004: Abajur_Grande
+    400006: Abajur Grande
+    400008: "Abajur p\xE9"
     2100000: Lamp
     2100002: Metal
     2300000: Abajur_p_
     2300002: //RootNode
     2300004: Abajur_Grande
+    2300006: Abajur Grande
+    2300008: "Abajur p\xE9"
     3300000: Abajur_p_
     3300002: //RootNode
     3300004: Abajur_Grande
+    3300006: Abajur Grande
+    3300008: "Abajur p\xE9"
     4300000: Abajur
     4300002: Abajur_p_
     4300004: Abajur_Grande
+    4300006: Abajur Grande
+    4300008: "Abajur p\xE9"
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
