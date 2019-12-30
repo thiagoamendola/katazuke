@@ -88,7 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: dac0bee60c859144f8b0ecf11085c1ca,
+  m_LightingDataAsset: {fileID: 112000008, guid: dac0bee60c859144f8b0ecf11085c1ca,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -328,14 +328,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 79212ecb083d45b4c9be73d904f26ea9, type: 2}
-    - target: {fileID: 2300008, guid: 7a3e29fcc3a1a684894e90a86696d425, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b8a5d7e152f46fc43af1d28a03bc70c9, type: 2}
     - target: {fileID: 2300002, guid: 7a3e29fcc3a1a684894e90a86696d425, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0483120f4eadd384985f65f30d68940b, type: 2}
+    - target: {fileID: 2300008, guid: 7a3e29fcc3a1a684894e90a86696d425, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b8a5d7e152f46fc43af1d28a03bc70c9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3e29fcc3a1a684894e90a86696d425, type: 3}
 --- !u!4 &536396587 stripped
@@ -2090,11 +2090,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -2416,10 +2416,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: cc4b826c184457a4aa80a4616e62eb84, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: cc4b826c184457a4aa80a4616e62eb84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -62.55
@@ -2500,6 +2496,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4be8a7b0c2a768a439fcc01b5721bae8, type: 2}
+    - target: {fileID: 100010, guid: cc4b826c184457a4aa80a4616e62eb84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc4b826c184457a4aa80a4616e62eb84, type: 3}
 --- !u!4 &1954182164 stripped
