@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TutorialScreen : MonoBehaviour
 {
 
     public TutorialAnimator tutorialAnimator;
+
+    public TextMeshProUGUI tutorialText;
 
     [Header("Tutorial Steps")]
 
@@ -36,7 +39,7 @@ public class TutorialScreen : MonoBehaviour
             ScreenManager.GoToTitleScreen();
             return;
         }
-        // change text
+        tutorialText.text = tutorialTextList[newStepIndex];
         if( stepIndex < 0 || animationNameList[stepIndex] != animationNameList[newStepIndex]){
             tutorialAnimator.StopGreetParticle();
             if(stepIndex >= 0)
