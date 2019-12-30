@@ -29,15 +29,6 @@ public class TutorialAnimator : MonoBehaviour
         }
     }
 
-    public void PlayJoyParticle(bool joyful){
-        List<ParticleSystem> pss = new List<ParticleSystem>(playerCharacter.GetComponentsInChildren<ParticleSystem>());
-        if (joyful){
-            pss[0].Play();
-        }else{
-            pss[1].Play();
-        }
-    }
-
 
     public void OpenWardrobe(){
         wardrobe.GetComponent<Animator>().SetTrigger("OpenClose");
@@ -45,6 +36,18 @@ public class TutorialAnimator : MonoBehaviour
 
     public void OpenDiscardBox(){
         discardBox.GetComponent<Animator>().SetTrigger("OpenClose");
+    }
+
+    public void ToggleGreetParticle(bool joyful){
+        discardBox.GetComponent<Animator>().SetTrigger("OpenClose");
+    }
+
+    public void PlayGreetParticle(){
+        discardBox.transform.parent.gameObject.GetComponent<ParticleSystem>().Play();
+    }
+
+    public void StopGreetParticle(){
+        discardBox.transform.parent.gameObject.GetComponent<ParticleSystem>().Stop();
     }
 
 }
