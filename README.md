@@ -46,10 +46,16 @@ Developed during Global Game Jam 2019.
 - [x] Fix lighting
 - [x] Create exit button
 - [x] Rebake lighting for all scenes
+- [ ] Create tutorial
+    - [ ] Intro to controls
+    - [x] Grab cloth
+    - [x] Fold cloth
+    - [ ] Bring happy clothes to wardrobe
+    - [ ] Bring sad clothes to box
+    - [ ] Deplete pile and greet to win
 - [ ] Create generic tweener
     - Tween esc text in game screen
     - Tween esc text in input screen
-- [ ] Create tutorial
 - [ ] Solve cloth flickering when walking (STILL HAPPEN?)
 - [ ] Improve launcher banner
 

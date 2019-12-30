@@ -13,6 +13,7 @@ public class TutorialAnimator : MonoBehaviour
             playerAnimator.SetBool(lastPlayerAnim, false);
         switch(animName){
             case "hold":
+            case "fold":
                 playerAnimator.ResetTrigger(animName);
                 playerAnimator.SetTrigger(animName);
                 lastPlayerAnim = "";
