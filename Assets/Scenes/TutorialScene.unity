@@ -249,6 +249,8 @@ MonoBehaviour:
   playerCharacter: {fileID: 1022319494}
   wardrobe: {fileID: 1795925976}
   discardBox: {fileID: 2130513971}
+  clothesPile: {fileID: 0}
+  foldingTable: {fileID: 0}
 --- !u!1 &444189376
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +901,7 @@ MonoBehaviour:
   tutorialAnimator: {fileID: 415123264}
   tutorialText: {fileID: 1125468284}
   animationNameList:
-  - ending
+  - beginning
   - grabcloth
   - foldcloth
   - happycloth
