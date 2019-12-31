@@ -11,10 +11,6 @@ public abstract class GenericScreen : MonoBehaviour{
 
     protected virtual void Start(){
         ScreenManager.Create();
-        if(!ScreenManager.openedScreen){
-            ScreenManager.openedScreen = true;
-            Open();
-        }
     }
 
     public abstract void Open();
