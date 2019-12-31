@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TutorialAnimator : MonoBehaviour
@@ -18,6 +19,13 @@ public class TutorialAnimator : MonoBehaviour
     void Awake(){
         animator = GetComponent<Animator>();
         lastPlayerAnim = "";
+    }
+
+    void Start(){
+        List<Animator> arrowAnimList = new List<Animator>(GetComponentsInChildren<Animator>().Where(a => a.name == "Arrow").Cast<Animator>().ToList());
+        foreach (Animator arrowAnim in arrowAnimList){
+            arrowAnim.SetBool("ShowLoop", true);
+        }
     }
 
     public void TriggerPlayerAnimation(string animName){
