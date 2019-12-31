@@ -102,6 +102,7 @@ public class InputScreen : GenericScreen {
     }
 
 	void InitiateScreen(){
+		InputManager.Reset();
 		inputStep = InputStep.AssigningInput;
 		playerNumber = PlayerNumber.Player1;
 		escText.text = "to Exit";
@@ -125,7 +126,6 @@ public class InputScreen : GenericScreen {
 			}
 			inputSamplerList[(int)playerNumber].ResetInput();
 		}
-		InputManager.Reset();
 		InitiateScreen();
 	}
 
@@ -136,6 +136,7 @@ public class InputScreen : GenericScreen {
 				wardrobeList[(int)PlayerNumber.Player1].ResetTrigger("Close");
 				wardrobeList[(int)PlayerNumber.Player1].SetTrigger("Close");
 				resetable = false;
+				escText.transform.parent.gameObject.SetActive(false);
 				ScreenManager.GoToTitleScreen();
 			}else{
 				Reset();
