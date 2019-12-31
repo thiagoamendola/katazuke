@@ -13,6 +13,8 @@ public class ScreenManager : MonoBehaviour{
 
 	LoadSceneParameters loadSceneParameters;
 
+	[HideInInspector]
+	public static bool openedScreen = false;
 
 	#region Singleton
 
@@ -63,6 +65,7 @@ public class ScreenManager : MonoBehaviour{
 	}
 
 	IEnumerator GoToScreen(string screenName){
+		openedScreen = true;
 		Scene oldScene = SceneManager.GetActiveScene();
 		GenericScreen oldScreen = activeScreen;
 		// Load new scene and set as active.
