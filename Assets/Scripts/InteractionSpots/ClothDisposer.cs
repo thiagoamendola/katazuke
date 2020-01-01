@@ -33,6 +33,7 @@ public class ClothDisposer : InteractionSpot {
                 return true;
             }else if(!requiresJoy && player.holdingObject == null && player.clothesQuantity <= 0){
                 // End the game.
+                hint.Hide();
                 ((GameScreen)ScreenManager.activeScreen).EndGame(player);
                 return true;
             }

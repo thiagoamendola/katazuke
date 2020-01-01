@@ -64,6 +64,12 @@ public class Player : MonoBehaviour {
 					spot.hint.Show();
 				}
 				previousNextSpots = nextSpots;
+				// If last cloth, turn on arrow.
+				if(clothesQuantity <= 0 && currentInteractionSpot is ClothDisposer && holdingObject != null){
+					List <ClothDisposer> allSpotsList = new List<ClothDisposer>(GameObject.FindObjectsOfType<ClothDisposer>());
+                    allSpotsList = allSpotsList.Where(s => s.playerNumber == playerNumber && !s.requiresJoy).Cast<ClothDisposer>().ToList();
+					allSpotsList[0].hint.Show();
+				}
 			}
 		}
 	}
