@@ -1,77 +1,218 @@
 fileFormatVersion: 2
 guid: 65806e766e937334184fe6b176f65a75
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armario_caixa
-    100002: Caixas
-    100004: Plano
-    100006: Porta
-    100008: //RootNode
-    100010: Armario_001
-    100012: Armature
-    100014: Cima
-    100016: Direita
-    100018: Esquerda
-    100020: Root
-    100022: Armario caixa
-    100024: Armario.001
-    100026: Cima_end
-    100028: Direita_end
-    100030: Esquerda_end
-    400000: Armario_caixa
-    400002: Caixas
-    400004: Plano
-    400006: Porta
-    400008: //RootNode
-    400010: Armario_001
-    400012: Armature
-    400014: Cima
-    400016: Direita
-    400018: Esquerda
-    400020: Root
-    400022: Armario caixa
-    400024: Armario.001
-    400026: Cima_end
-    400028: Direita_end
-    400030: Esquerda_end
-    2100000: Wardrobe
-    2100002: Wardrobe_box
-    2100004: Material
-    2100006: Wardrobe_Door
-    2100008: Wardrobe_Handle
-    2300000: Armario_caixa
-    2300002: Caixas
-    2300004: Plano
-    2300006: Porta
-    2300008: //RootNode
-    2300010: Armario caixa
-    3300000: Armario_caixa
-    3300002: Caixas
-    3300004: Plano
-    3300006: Porta
-    3300008: //RootNode
-    3300010: Armario caixa
-    4300000: Armario_001
-    4300002: Armario_caixa
-    4300004: Caixas
-    4300006: Plano
-    4300008: Porta
-    4300010: Armario.001
-    4300012: Armario caixa
-    7400000: Default Take
-    7400002: Closed
-    7400004: Idle
-    7400006: Open
-    7400008: Armature|Closed
-    7400010: Armature|Idle
-    7400012: Armature|Open
-    7400014: Plano|Idle
-    9500000: //RootNode
-    13700000: Armario_001
-    13700002: Porta
-    13700004: Armario.001
-    2186277476908879412: ImportLogs
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armario_caixa
+  - first:
+      1: 100002
+    second: Caixas
+  - first:
+      1: 100004
+    second: Plano
+  - first:
+      1: 100006
+    second: Porta
+  - first:
+      1: 100008
+    second: //RootNode
+  - first:
+      1: 100010
+    second: Armario_001
+  - first:
+      1: 100012
+    second: Armature
+  - first:
+      1: 100014
+    second: Cima
+  - first:
+      1: 100016
+    second: Direita
+  - first:
+      1: 100018
+    second: Esquerda
+  - first:
+      1: 100020
+    second: Root
+  - first:
+      1: 100022
+    second: Armario caixa
+  - first:
+      1: 100024
+    second: Armario.001
+  - first:
+      1: 100026
+    second: Cima_end
+  - first:
+      1: 100028
+    second: Direita_end
+  - first:
+      1: 100030
+    second: Esquerda_end
+  - first:
+      4: 400000
+    second: Armario_caixa
+  - first:
+      4: 400002
+    second: Caixas
+  - first:
+      4: 400004
+    second: Plano
+  - first:
+      4: 400006
+    second: Porta
+  - first:
+      4: 400008
+    second: //RootNode
+  - first:
+      4: 400010
+    second: Armario_001
+  - first:
+      4: 400012
+    second: Armature
+  - first:
+      4: 400014
+    second: Cima
+  - first:
+      4: 400016
+    second: Direita
+  - first:
+      4: 400018
+    second: Esquerda
+  - first:
+      4: 400020
+    second: Root
+  - first:
+      4: 400022
+    second: Armario caixa
+  - first:
+      4: 400024
+    second: Armario.001
+  - first:
+      4: 400026
+    second: Cima_end
+  - first:
+      4: 400028
+    second: Direita_end
+  - first:
+      4: 400030
+    second: Esquerda_end
+  - first:
+      21: 2100000
+    second: Wardrobe
+  - first:
+      21: 2100002
+    second: Wardrobe_box
+  - first:
+      21: 2100004
+    second: Material
+  - first:
+      21: 2100006
+    second: Wardrobe_Door
+  - first:
+      21: 2100008
+    second: Wardrobe_Handle
+  - first:
+      23: 2300000
+    second: Armario_caixa
+  - first:
+      23: 2300002
+    second: Caixas
+  - first:
+      23: 2300004
+    second: Plano
+  - first:
+      23: 2300006
+    second: Porta
+  - first:
+      23: 2300008
+    second: //RootNode
+  - first:
+      23: 2300010
+    second: Armario caixa
+  - first:
+      33: 3300000
+    second: Armario_caixa
+  - first:
+      33: 3300002
+    second: Caixas
+  - first:
+      33: 3300004
+    second: Plano
+  - first:
+      33: 3300006
+    second: Porta
+  - first:
+      33: 3300008
+    second: //RootNode
+  - first:
+      33: 3300010
+    second: Armario caixa
+  - first:
+      43: 4300000
+    second: Armario_001
+  - first:
+      43: 4300002
+    second: Armario_caixa
+  - first:
+      43: 4300004
+    second: Caixas
+  - first:
+      43: 4300006
+    second: Plano
+  - first:
+      43: 4300008
+    second: Porta
+  - first:
+      43: 4300010
+    second: Armario.001
+  - first:
+      43: 4300012
+    second: Armario caixa
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: Closed
+  - first:
+      74: 7400004
+    second: Idle
+  - first:
+      74: 7400006
+    second: Open
+  - first:
+      74: 7400008
+    second: Armature|Closed
+  - first:
+      74: 7400010
+    second: Armature|Idle
+  - first:
+      74: 7400012
+    second: Armature|Open
+  - first:
+      74: 7400014
+    second: Plano|Idle
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Armario_001
+  - first:
+      137: 13700002
+    second: Porta
+  - first:
+      137: 13700004
+    second: Armario.001
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -94,7 +235,7 @@ ModelImporter:
       name: Wardrobe_box
     second: {fileID: 2100000, guid: 0953213ef5c387f46a1ba01b7b7b2d54, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -127,25 +268,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -154,10 +298,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -167,13 +311,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
