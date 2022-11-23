@@ -476,7 +476,7 @@ AnimatorStateTransition:
   m_CanTransitionToSelf: 1
 --- !u!1102 &1102201221097875498
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -502,7 +502,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102389866710007372
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -531,7 +531,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102397235009665238
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -561,7 +561,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102414294603713404
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -588,7 +588,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102470567414708788
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -617,7 +617,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102553799753638114
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -643,7 +643,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102832762031055628
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -673,7 +673,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1102 &1102913938798809834
 AnimatorState:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -701,7 +701,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1107 &1107957538931711382
 AnimatorStateMachine:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -710,7 +710,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102832762031055628}
-    m_Position: {x: -12, y: 180, z: 0}
+    m_Position: {x: -10, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102397235009665238}
     m_Position: {x: 288, y: 204, z: 0}
