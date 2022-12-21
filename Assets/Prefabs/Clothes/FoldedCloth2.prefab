@@ -74,13 +74,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2691839796145743474}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.04304993}
+  m_LocalRotation: {x: -0.7067845, y: 0.021347586, z: 0.021347582, w: 0.7067845}
+  m_LocalPosition: {x: -0.049, y: 0.033, z: -0.136}
   m_LocalScale: {x: 1.7992, y: 1.7992, z: 1.7992}
   m_Children: []
   m_Father: {fileID: 5120749407701741697}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 3.46}
 --- !u!33 &2691839796148779634
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -103,6 +103,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -114,6 +116,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -126,6 +129,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1269049033394118596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,10 +137,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5120749407701741697}
     m_Modifications:
-    - target: {fileID: 7336089211301060969, guid: 34190c172f11b354a99d2162a386b0fc,
+    - target: {fileID: 2934514564834794971, guid: 34190c172f11b354a99d2162a386b0fc,
         type: 3}
-      propertyPath: m_Name
-      value: JoyfulParticle
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2934514564834794971, guid: 34190c172f11b354a99d2162a386b0fc,
         type: 3}
@@ -155,6 +159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2934514564834794971, guid: 34190c172f11b354a99d2162a386b0fc,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.73618823
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934514564834794971, guid: 34190c172f11b354a99d2162a386b0fc,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.6767769
       objectReference: {fileID: 0}
@@ -170,16 +179,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2934514564834794971, guid: 34190c172f11b354a99d2162a386b0fc,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.73618823
-      objectReference: {fileID: 0}
-    - target: {fileID: 2934514564834794971, guid: 34190c172f11b354a99d2162a386b0fc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2934514564834794971, guid: 34190c172f11b354a99d2162a386b0fc,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -85.185005
       objectReference: {fileID: 0}
@@ -192,6 +191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336089211301060969, guid: 34190c172f11b354a99d2162a386b0fc,
+        type: 3}
+      propertyPath: m_Name
+      value: JoyfulParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34190c172f11b354a99d2162a386b0fc, type: 3}
@@ -214,10 +218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5120749407701741697}
     m_Modifications:
-    - target: {fileID: 6545294855005030036, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
+    - target: {fileID: 3658077621310458734, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
         type: 3}
-      propertyPath: m_Name
-      value: JoylessParticle
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3658077621310458734, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
         type: 3}
@@ -236,6 +240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3658077621310458734, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.73618823
+      objectReference: {fileID: 0}
+    - target: {fileID: 3658077621310458734, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.6767769
       objectReference: {fileID: 0}
@@ -251,16 +260,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3658077621310458734, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.73618823
-      objectReference: {fileID: 0}
-    - target: {fileID: 3658077621310458734, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3658077621310458734, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -85.185005
       objectReference: {fileID: 0}
@@ -273,6 +272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545294855005030036, guid: e764f002b63dbef48a7b6b2c3b2cde5d,
+        type: 3}
+      propertyPath: m_Name
+      value: JoylessParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e764f002b63dbef48a7b6b2c3b2cde5d, type: 3}
