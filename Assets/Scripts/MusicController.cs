@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MusicController : MonoBehaviour {
 
+	const float MINIMUM_PLAYER_VOLUME = 0.2f;
+
 	private AudioSource audioSource;
 
 	#region Singleton
@@ -55,4 +57,9 @@ public class MusicController : MonoBehaviour {
 		audioSource.Play();
 	}
 
+	public void UpdatePlayerMusic(Player player){
+		float progressMultiplier = (float)(player.totalClothesQuantity-player.clothesQuantity)/(float)player.totalClothesQuantity;
+		float newVolume = MINIMUM_PLAYER_VOLUME + (1.0f - MINIMUM_PLAYER_VOLUME)*progressMultiplier;
+		transform.Find("Music"+player.playerNumber.ToString()).GetComponent<AudioSource>().volume = newVolume;
+	}
 }

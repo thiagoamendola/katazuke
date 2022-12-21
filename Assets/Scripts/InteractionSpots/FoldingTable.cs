@@ -12,7 +12,7 @@ public class FoldingTable : InteractionSpot{
     public override bool TriggerInteraction(Player player) {
         if (player.playerNumber == playerNumber) {
             if (player.holdingObject != null && player.holdingObject.name == "Cloth") {
-                Destroy(player.holdingObject);
+                player.DestroyHoldingObject();
                 player.holdingObject = (GameObject)Instantiate(foldedClothPrefab, player.holdingPoint.transform.position, player.transform.rotation, player.holdingPoint.transform);
                 player.holdingObject.name = "FoldedCloth";
                 bool joy = Random.Range(0f,1f) > 0.5f;

@@ -46,6 +46,7 @@ public class Player : MonoBehaviour {
         controlInput = (ControlInput?) InputManager.GetControlInput(playerNumber);
 		mistakeThought = transform.Find("ThoughtsHolder").Find("Mistake").gameObject.GetComponent<ThoughtBalloon>();
 		previousNextSpots = new List<ClothesPile>(GameObject.Find("Room").transform.Find("InteractionSpots").gameObject.GetComponentsInChildren<ClothesPile>().Where(r => r.playerNumber == playerNumber)).Cast<InteractionSpot>().ToList();
+		MusicController.Instance.UpdatePlayerMusic(this);
 	}
 
 	void Update() {
@@ -115,6 +116,24 @@ public class Player : MonoBehaviour {
 			rigidbody.velocity = Vector3.zero;
 		}
     }
+
+	public void DestroyHoldingObject(){
+		// Release the main variable from its reference
+		GameObject destroyingObject = holdingObject;
+		holdingObject = null;
+
+		destroyingObject.transform.parent = null;
+		destroyingObject.transform.Find("JoyfulParticle")?.GetComponent<ParticleSystem>().Stop();
+		destroyingObject.transform.Find("JoylessParticle")?.gameObject.SetActive(false);
+
+		foreach(MeshRenderer mr in destroyingObject.GetComponentsInChildren<MeshRenderer>()){
+			mr.enabled = false;
+		}
+		foreach(SkinnedMeshRenderer smr in destroyingObject.GetComponentsInChildren<SkinnedMeshRenderer>()){
+			smr.enabled = false;
+		}
+		Destroy(destroyingObject, 1.5f);
+	}
 
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "InteractionSpot"){

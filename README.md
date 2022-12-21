@@ -56,10 +56,7 @@ Developed during Global Game Jam 2019.
 - [ ] Create generic tweener
     - Tween esc text in game screen
     - Tween esc text in input screen
-- [ ] Solve cloth flickering when walking (STILL HAPPEN?)
-- [ ] Improve launcher banner
+- [x] Solve cloth flickering when walking
+- [ ] Improve visual effects
 
 --
-
-- [ ] Create stage selection screen
-- [ ] Create more stages

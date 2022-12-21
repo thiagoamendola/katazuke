@@ -19,8 +19,8 @@ public class ClothDisposer : InteractionSpot {
                 // Trigger animation
                 GetComponentsInChildren<Animator>()[1].SetTrigger("OpenClose");
                 // Fold cloth.
-                Destroy(player.holdingObject);
-                GameObject.Find("Music"+player.playerNumber.ToString()).GetComponent<AudioSource>().volume = 0.1f + (float)(player.totalClothesQuantity-player.clothesQuantity)/(float)player.totalClothesQuantity;
+                player.DestroyHoldingObject();
+                MusicController.Instance.UpdatePlayerMusic(player);
                 GetComponent<AudioSource>().clip = AssetReferences.instance.clothDropClip;
                 GetComponent<AudioSource>().Play();
                 if(player.clothesQuantity <= 0){
