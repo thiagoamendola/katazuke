@@ -863,22 +863,22 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: TriggerPlayerAnimationParam
-    data: walking
+    functionName: PlayAnimator
+    data: Walk
     objectReferenceParameter: {fileID: 0}
     floatParameter: 2
     intParameter: 0
     messageOptions: 0
   - time: 1.2
-    functionName: TriggerPlayerAnimationParam
-    data: hold
+    functionName: PlayAnimator
+    data: Pick
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.4
-    functionName: TriggerPlayerAnimationParam
-    data: idle_hold
+  - time: 1.5
+    functionName: PlayAnimator
+    data: Walk_Hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

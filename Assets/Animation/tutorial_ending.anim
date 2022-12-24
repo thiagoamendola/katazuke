@@ -2707,8 +2707,8 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: TriggerPlayerAnimationParam
-    data: hold
+    functionName: PlayAnimator
+    data: Walk_Hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
@@ -2721,43 +2721,43 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.8
-    functionName: TriggerPlayerAnimationParam
-    data: idle
+    functionName: PlayAnimator
+    data: Idle
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.3
-    functionName: TriggerPlayerAnimationParam
-    data: hold
+    functionName: PlayAnimator
+    data: Pick
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.1
-    functionName: TriggerPlayerAnimationParam
-    data: idle_hold
+    functionName: PlayAnimator
+    data: Walk_Hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 4.4
-    functionName: TriggerPlayerAnimationParam
-    data: fold
+    functionName: PlayAnimator
+    data: Fold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 5.6
-    functionName: TriggerPlayerAnimationParam
-    data: idle_hold
+    functionName: PlayAnimator
+    data: Walk_Hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 7.2
-    functionName: TriggerPlayerAnimationParam
-    data: hold
+    functionName: PlayAnimator
+    data: Walk_Hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
@@ -2776,9 +2776,23 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 7.3
+    functionName: PlayAnimator
+    data: Idle
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 9.4
+    functionName: PlayAnimator
+    data: Walk
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 10
-    functionName: TriggerPlayerAnimationParam
-    data: praise
+    functionName: PlayAnimator
+    data: Praise
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  playerAnimator: {fileID: 0}
   playerCharacter: {fileID: 56290722}
   wardrobe: {fileID: 1795925976}
   discardBox: {fileID: 2130513971}
@@ -1418,6 +1419,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -3.197442e-14
       objectReference: {fileID: 0}
+    - target: {fileID: 8017652977248155189, guid: 71c42b73abcf0ed4eac67bd6a73cf472,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 85132f0602be01d4bbdc45e2db1a3379, type: 2}
     m_RemovedComponents:
     - {fileID: 3164528147787894640, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}
     - {fileID: 3079562774192206138, guid: 71c42b73abcf0ed4eac67bd6a73cf472, type: 3}

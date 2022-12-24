@@ -8,17 +8,14 @@ public class TutorialAnimator : MonoBehaviour
 
     [HideInInspector]
     public Animator animator;
+    public Animator playerAnimator;
 
     public GameObject playerCharacter;
     public GameObject wardrobe;
     public GameObject discardBox;
     
-    string lastPlayerAnim;
-
-
     void Awake(){
         animator = GetComponent<Animator>();
-        lastPlayerAnim = "";
     }
 
     void Start(){
@@ -26,26 +23,12 @@ public class TutorialAnimator : MonoBehaviour
         foreach (Animator arrowAnim in arrowAnimList){
             arrowAnim.SetBool("ShowLoop", true);
         }
+        playerAnimator = playerCharacter.GetComponent<Animator>();
     }
 
-    public void TriggerPlayerAnimation(string animName){
-        Animator playerAnimator = playerCharacter.GetComponent<Animator>();
-        if (lastPlayerAnim != "")
-            playerAnimator.SetBool(lastPlayerAnim, false);
-        switch(animName){
-            case "pick":
-            case "fold":
-                playerAnimator.ResetTrigger(animName);
-                playerAnimator.SetTrigger(animName);
-                lastPlayerAnim = "";
-                break;
-            default:
-                playerAnimator.SetBool(animName, true);
-                lastPlayerAnim = animName;
-                break;
-        }
+    public void PlayAnimator(string stateName){
+        playerAnimator.Play(stateName);
     }
-
 
     public void OpenWardrobe(){
         wardrobe.GetComponent<Animator>().SetTrigger("OpenClose");
