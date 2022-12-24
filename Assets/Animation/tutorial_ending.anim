@@ -2707,8 +2707,8 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: TriggerPlayerAnimation
-    data: pick
+    functionName: TriggerPlayerAnimationParam
+    data: hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
@@ -2721,43 +2721,43 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.8
-    functionName: TriggerPlayerAnimation
+    functionName: TriggerPlayerAnimationParam
     data: idle
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.3
-    functionName: TriggerPlayerAnimation
-    data: pick
+    functionName: TriggerPlayerAnimationParam
+    data: hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.1
-    functionName: TriggerPlayerAnimation
+    functionName: TriggerPlayerAnimationParam
     data: idle_hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 4.4
-    functionName: TriggerPlayerAnimation
+    functionName: TriggerPlayerAnimationParam
     data: fold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 5.6
-    functionName: TriggerPlayerAnimation
+    functionName: TriggerPlayerAnimationParam
     data: idle_hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 7.2
-    functionName: TriggerPlayerAnimation
-    data: pick
+    functionName: TriggerPlayerAnimationParam
+    data: hold
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
@@ -2777,7 +2777,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 10
-    functionName: TriggerPlayerAnimation
+    functionName: TriggerPlayerAnimationParam
     data: praise
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

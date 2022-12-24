@@ -31,7 +31,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "1.17.6",
+      "version": "1.17.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -103,7 +103,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.analytics": {
-      "version": "4.0.1",
+      "version": "4.2.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -113,8 +113,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-      "version": "1.4.0",
-      "depth": 2,
+      "version": "1.6.0",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.unitywebrequest": "1.0.0",

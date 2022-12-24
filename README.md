@@ -61,5 +61,7 @@ Developed during Global Game Jam 2019.
 - [ ] Fix tutorial animation
 - [x] Fix particle lighting
 - [x] Make sure visual effects between scene transitions work fine
+- [ ] Load assets beforehand as they seem to be lazyloaded
+
 
 --
