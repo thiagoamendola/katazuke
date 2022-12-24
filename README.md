@@ -57,6 +57,9 @@ Developed during Global Game Jam 2019.
     - Tween esc text in game screen
     - Tween esc text in input screen
 - [x] Solve cloth flickering when walking
-- [ ] Improve visual effects
+- [x] Improve visual effects
+- [ ] Fix tutorial animation
+- [x] Fix particle lighting
+- [ ] Make sure visual effects between scene transitions work fine
 
 --
