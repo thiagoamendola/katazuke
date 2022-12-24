@@ -60,6 +60,6 @@ Developed during Global Game Jam 2019.
 - [x] Improve visual effects
 - [ ] Fix tutorial animation
 - [x] Fix particle lighting
-- [ ] Make sure visual effects between scene transitions work fine
+- [x] Make sure visual effects between scene transitions work fine
 
 --
