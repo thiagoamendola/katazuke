@@ -53,9 +53,6 @@ Developed during Global Game Jam 2019.
     - [x] Bring happy clothes to wardrobe
     - [x] Bring sad clothes to box
     - [x] Deplete pile and greet to win
-- [ ] Create generic tweener
-    - Tween esc text in game screen
-    - Tween esc text in input screen
 - [x] Solve cloth flickering when walking
 - [x] Improve visual effects
 - [ ] Fix tutorial animation
@@ -64,4 +61,8 @@ Developed during Global Game Jam 2019.
 - [ ] Load assets beforehand as they seem to be lazyloaded
 
 
---
+----
+
+- [ ] Make stage selection
+- [ ] Make new stages
+- [ ] Implement accessibility features
