@@ -55,9 +55,10 @@ Developed during Global Game Jam 2019.
     - [x] Deplete pile and greet to win
 - [x] Solve cloth flickering when walking
 - [x] Improve visual effects
-- [ ] Fix tutorial animation
+- [x] Fix tutorial animation
 - [x] Fix particle lighting
 - [x] Make sure visual effects between scene transitions work fine
+- [x] Fix animation on first step of tutorial
 - [ ] Load assets beforehand as they seem to be lazyloaded
 
 

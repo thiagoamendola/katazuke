@@ -12,8 +12,7 @@ public class Player : MonoBehaviour {
 	public bool softControlEnabled;
 	public float speed = 5;
     public int totalClothesQuantity = 10;
-    
-	[HideInInspector]
+
 	public int clothesQuantity;
 	[HideInInspector]
 	public Animator animator;

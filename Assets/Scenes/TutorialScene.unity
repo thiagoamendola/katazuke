@@ -1074,8 +1074,7 @@ MonoBehaviour:
   - Go to the folding table to fold the cloth.
   - If it sparks happiness, put it in the wardrobe.
   - If it doesn't manifest joy, put it in the discard box.
-  - After tidying all clothes, go to the discard box to thanks the clothes to be
-    disposed.
+  - After tidying all clothes, go to the discard box to thanks the disposed clothes.
   - The first person to tidy all their clothes wins!
 --- !u!4 &905008068
 Transform:

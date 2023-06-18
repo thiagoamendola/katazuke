@@ -2677,6 +2677,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0
+    functionName: StopGreetParticle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 2.3
     functionName: PlayAnimator
     data: Pick
@@ -2728,7 +2735,7 @@ AnimationClip:
     messageOptions: 0
   - time: 10
     functionName: PlayAnimator
-    data: praise
+    data: Praise
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
