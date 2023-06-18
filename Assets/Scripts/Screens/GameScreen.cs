@@ -56,7 +56,7 @@ public class GameScreen : GenericScreen {
     }
 
 	void Update() {
-		if(Input.GetKeyDown(KeyCode.Escape)){
+		if(Input.GetKeyDown(KeyCode.Escape) && !ScreenManager.IsTransitioning()){
             if (!checkingForReset){
                 checkingForReset = true;
                 escMessage.SetActive(true);

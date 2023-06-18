@@ -20,6 +20,8 @@ public class TutorialScreen : GenericScreen
 
     int stepIndex;
 
+    bool exiting = false;
+
     public override void Open(){
         globalCanvas.SetActive(false);
         FocusCamera();
@@ -38,9 +40,10 @@ public class TutorialScreen : GenericScreen
     }
 
     void Update() {
-		if(Input.GetKeyDown(KeyCode.Escape)){
+		if(!exiting && Input.GetKeyDown(KeyCode.Escape) && !ScreenManager.IsTransitioning()){
             globalCanvas.SetActive(false);
             ScreenManager.GoToTitleScreen();
+            exiting = true;
 		} else if (Input.GetButtonDown("ActionCtrl1") || Input.GetButtonDown("ActionCtrl1") || 
             Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)){
             GoToStep(stepIndex+1);

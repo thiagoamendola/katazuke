@@ -79,10 +79,8 @@ public class InputScreen : GenericScreen {
 			wardrobeList[(int)playerNumber].ResetTrigger("Open");
 			wardrobeList[(int)playerNumber].SetTrigger("Close");
 			inputSamplerList[(int)playerNumber].SelectInput(detectedTypeIndex);
-			//
 			escText.text = "to Restart";
 		}
-		// Add countdown <--
 		// Maybe improve here: only go to next scene when interaction input is pressed.
 		yield return new WaitForSeconds(1.5f);
 		resetable = false;
@@ -130,7 +128,7 @@ public class InputScreen : GenericScreen {
 	}
 
 	void Update() {
-		if(resetable && Input.GetKeyDown(KeyCode.Escape)){
+		if(resetable && Input.GetKeyDown(KeyCode.Escape) && !ScreenManager.IsTransitioning()){
 			if (playerNumber == PlayerNumber.Player1){
 				wardrobeList[(int)PlayerNumber.Player1].ResetTrigger("Open");
 				wardrobeList[(int)PlayerNumber.Player1].ResetTrigger("Close");

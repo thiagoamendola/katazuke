@@ -31,7 +31,7 @@ public class TitleScreen : GenericScreen {
     }
 
     IEnumerator StartAsync(){
-        if (!SceneManager.GetSceneByName("MainScenario").isLoaded){
+        if (!SceneManager.GetSceneByName("MainScenario").isLoaded) {
             loadingScreen.SetActive(true);
             yield return new WaitUntil(() => SceneManager.GetSceneByName("MainScenario").isLoaded);
             loadingScreen.SetActive(false);
@@ -39,6 +39,10 @@ public class TitleScreen : GenericScreen {
     }
 
     public void ButtonPlay() {
+        // Ignore if scene is in the middle of a transition.
+        if (ScreenManager.IsTransitioning()) {
+            return;
+        }
         // Disable UI
         uiCanvas.SetActive(false);
         // Call Input Screen
@@ -46,6 +50,10 @@ public class TitleScreen : GenericScreen {
     }
 
     public void ButtonTutorial() {
+        // Ignore if scene is in the middle of a transition.
+        if (ScreenManager.IsTransitioning()) {
+            return;
+        }
         // Disable UI
         uiCanvas.SetActive(false);
         // Call Input Screen

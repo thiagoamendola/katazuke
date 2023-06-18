@@ -11,6 +11,8 @@ public class ScreenManager : MonoBehaviour{
 
 	public static GenericScreen activeScreen;
 
+	static bool isTransitioning;
+
 	LoadSceneParameters loadSceneParameters;
 
 	#region Singleton
@@ -43,6 +45,7 @@ public class ScreenManager : MonoBehaviour{
 	#region Monobehaviour Methods
 
 	public void Setup(){
+		isTransitioning = false;
 		// Set up additive load scene parameter
 		loadSceneParameters = new LoadSceneParameters(LoadSceneMode.Additive);
 		// Instantiate MainScenario with it's not instantiated
@@ -62,6 +65,7 @@ public class ScreenManager : MonoBehaviour{
 	}
 
 	IEnumerator GoToScreen(string screenName){
+		isTransitioning = true;
 		Scene oldScene = SceneManager.GetActiveScene();
 		GenericScreen oldScreen = activeScreen;
 		// Load new scene and set as active.
@@ -80,6 +84,7 @@ public class ScreenManager : MonoBehaviour{
         if(oldScene != null)
 			print(oldScene.name);
             SceneManager.UnloadSceneAsync(oldScene);
+		isTransitioning = false;
     }
 
 	#endregion
@@ -106,6 +111,9 @@ public class ScreenManager : MonoBehaviour{
 		Instance.StartCoroutine(Instance.GoToScreen("TutorialScene"));
 	}
 
+	public static bool IsTransitioning(){
+		return isTransitioning;
+	}
 
 	#endregion
 

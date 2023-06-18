@@ -3607,7 +3607,7 @@ PrefabInstance:
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.59
+      value: -1.44
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
@@ -3617,37 +3617,37 @@ PrefabInstance:
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.58
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.64040685
+      value: -0.8306546
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0035239586
+      value: 0.004570861
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.76801616
+      value: -0.55676085
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.004226153
+      value: -0.003063689
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.63100004
+      value: -0.631
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -190.02899
+      value: -292.335
       objectReference: {fileID: 0}
     - target: {fileID: 1326480907969653457, guid: 9779779dbe4d3f24cadf76f2b183de1a,
         type: 3}
